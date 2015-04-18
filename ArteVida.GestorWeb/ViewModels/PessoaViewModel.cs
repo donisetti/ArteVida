@@ -29,5 +29,6 @@ namespace ArteVida.GestorWeb.ViewModels
         public string TelefonePai { get; set; }
         public string Mae { get; set; }
         public string TelefoneMae { get; set; }
+        public string Tipo { get; set; }
     }
 }

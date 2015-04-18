@@ -13,11 +13,14 @@ namespace ArteVida.Dominio.Contexto
     public class DbContexto : DbContext, IUnitOfWork
     {
 
-        public DbContexto() : base("ArteVidaDbContexto")
+        public DbContexto()
+            : base("ArteVidaDbContexto")
         {
-          
-            // Database.SetInitializer(new CriarNovoBd());
+                    #if DEBUG
+                                Database.SetInitializer(new CriarNovoBd());
+                    #endif
 
+                            //    Database.SetInitializer(new CriarNovoBd());
         }
 
 
