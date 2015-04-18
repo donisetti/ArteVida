@@ -29,7 +29,7 @@
     .Columns(cols =>
     {
         cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })).Width(20);
-        cols.Bound(c => c.NumeroFicha).Width(40).Title("Ficha");
+        cols.Bound(c => c.NumeroFicha).Width(40).Title("Nº");
 
         cols.Bound(c => c.Nome).Width(150).Title("Nome");
     

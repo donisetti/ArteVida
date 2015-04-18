@@ -6,49 +6,59 @@
 
     <div class="row">
 
-        <div class="col-md-2">
+        <div class="col-sm-1">
             @Html.LabelFor(model => model.Nome)
         </div>
 
-        <div class="col-md-7">
+        <div class="col-sm-6">
             @Html.EditorFor(model => model.Nome)
             @Html.ValidationMessageFor(model => model.Nome)
+
+        </div>
+        
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.NumeroFicha)
+        </div>
+
+        <div class="col-sm-1">
+            @Html.EditorFor(model => model.NumeroFicha)
+            @Html.ValidationMessageFor(model => model.NumeroFicha)
 
         </div>
     </div>
     
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-sm-1">
             @Html.LabelFor(model => model.Telefone)
 
         </div>
 
-        <div class="col-md-2">
+        <div class="col-sm-3">
             @Html.EditorFor(model => model.Telefone)
             @Html.ValidationMessageFor(model => model.Telefone)
 
         </div>
 
-        @*<div class="col-md-2">
-            @Html.LabelFor(model => model.TelCelular)
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.DataCadastro)
 
         </div>
 
-        <div class="col-md-2">
-            @Html.EditorFor(model => model.TelCelular)
-            @Html.ValidationMessageFor(model => model.TelCelular)
+        <div class="col-sm-3">
+            @Html.EditorFor(model => model.DataCadastro)
+            @Html.ValidationMessageFor(model => model.DataCadastro)
 
-        </div>*@
+        </div>
     </div>
 
 
     @*<div class="row">
-        <div class="col-md-2">
+        <div class="col-sm-1">
             @Html.LabelFor(model => model.Email)
 
         </div>
 
-        <div class="col-md-5">
+        <div class="col-sm-5">
             @Html.EditorFor(model => model.Email)
             @Html.ValidationMessageFor(model => model.Email)
 
@@ -56,14 +66,14 @@
     </div>*@
 
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-sm-1">
             @Html.LabelFor(model => model.Tipo)
 
         </div>
 
        
         
-        <div class="col-md-8">
+        <div class="col-sm-8">
             @(Html.Kendo().ComboBox()
                 .Name("Tipo")
                 .Placeholder("Tipo...")
@@ -91,16 +101,16 @@
 
 <style scoped>
     .k-edit-form {
-        width: 750px;
+        width: 850px;
     }
 
     .k-edit-form-container {
-        width: 750px;
+        width: 850px;
         /*height: 300px;*/
     }
 
     div.row {
-        width: 650px;
+        width: 750px;
         margin-top: 5px;
     }
 

@@ -12,7 +12,14 @@ namespace ArteVida.Dominio.Entidades
         //[Key]
         //public int Id { get; set; }
 
-        public DateTime? DataCadastro { get; set; }
+        private DateTime? _DataCadastro;
+
+
+        public DateTime? DataCadastro
+        {
+            get { return _DataCadastro ?? DateTime.UtcNow; }
+            set { _DataCadastro = value; }
+        }
 
         public DateTime? DataAlteracao { get; set; }
 
