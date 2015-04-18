@@ -227,7 +227,9 @@
     <Compile Include="ViewModels\TransporteViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Atletas.sql" />
+    <Content Include="Atletas.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ArteVida.css" />

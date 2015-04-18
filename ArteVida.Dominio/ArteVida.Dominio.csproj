@@ -48,7 +48,6 @@
     <Compile Include="Configuracao\PessoaConfiguracao.cs" />
     <Compile Include="Contexto\CriarNovoBD.cs" />
     <Compile Include="Contexto\DbContexto.cs" />
-    <Compile Include="Contexto\PrepararDbContexto.cs" />
     <Compile Include="Entidades\Atleta.cs" />
     <Compile Include="Entidades\Empresa.cs" />
     <Compile Include="Entidades\Entidade.cs" />

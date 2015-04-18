@@ -15,8 +15,8 @@ namespace ArteVida.Dominio.Contexto
 
         public DbContexto() : base("ArteVidaDbContexto")
         {
-            // Database.SetInitializer(new PreparaDbcontexto()); // CriarNovoBd
-             Database.SetInitializer(new CriarNovoBd());
+          
+            // Database.SetInitializer(new CriarNovoBd());
 
         }
 
