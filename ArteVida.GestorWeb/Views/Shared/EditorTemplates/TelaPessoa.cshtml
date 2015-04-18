@@ -19,17 +19,17 @@
     
     <div class="row">
         <div class="col-md-2">
-            @Html.LabelFor(model => model.TelResidencial)
+            @Html.LabelFor(model => model.Telefone)
 
         </div>
 
         <div class="col-md-2">
-            @Html.EditorFor(model => model.TelResidencial)
-            @Html.ValidationMessageFor(model => model.TelResidencial)
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
 
         </div>
 
-        <div class="col-md-2">
+        @*<div class="col-md-2">
             @Html.LabelFor(model => model.TelCelular)
 
         </div>
@@ -38,11 +38,11 @@
             @Html.EditorFor(model => model.TelCelular)
             @Html.ValidationMessageFor(model => model.TelCelular)
 
-        </div>
+        </div>*@
     </div>
 
 
-    <div class="row">
+    @*<div class="row">
         <div class="col-md-2">
             @Html.LabelFor(model => model.Email)
 
@@ -53,7 +53,7 @@
             @Html.ValidationMessageFor(model => model.Email)
 
         </div>
-    </div>
+    </div>*@
 
     <div class="row">
         <div class="col-md-2">
@@ -68,11 +68,11 @@
                 .Name("Tipo")
                 .Placeholder("Tipo...")
                 .BindTo(new List<string>() {
-                    "Prospecto",
-                    "Cliente",
-                    "Titular",
-                    "Fornecedor",
-                    "Dependente"
+                    "Pessoa",
+                    "Atleta",
+                    "Empresa",
+                    "Instrutor",
+                    "Irmão"
 
                 })
                 .SelectedIndex(1)

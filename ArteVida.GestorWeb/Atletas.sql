@@ -47,3 +47,5 @@ INSERT INTO [dbo].[Pessoas] (NumeroFicha, Nome, Endereco, Bairro, Cidade, Rg, Cp
 INSERT INTO [dbo].[Pessoas] (NumeroFicha, Nome, Endereco, Bairro, Cidade, Rg, Cpf,Ativo,idade ) VALUES ( 47, 'Gabriele Vitoria De Mello Romanoli', '', 'Jardim Progresso', 'Colorado','' ,'',1,0);
 INSERT INTO [dbo].[Pessoas] (NumeroFicha, Nome, Endereco, Bairro, Cidade, Rg, Cpf,Ativo,idade ) VALUES ( 48, 'Joao Andre De Oliveira', '', 'Jardim Progresso', 'Colorado','' ,'',1,0);
 INSERT INTO [dbo].[Pessoas] (NumeroFicha, Nome, Endereco, Bairro, Cidade, Rg, Cpf,Ativo,idade ) VALUES ( 49, 'Jeferson Junior Souza Neves', '', 'Jardim Progresso', 'Colorado','' ,'',1,0);
+
+update [dbo].[Pessoas] set tipo='Pessoa';

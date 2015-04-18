@@ -1177,6 +1177,8 @@
     <Content Include="Views\Pessoa\Index.cshtml" />
     <Content Include="Views\Pessoa\_GridPessoas.cshtml" />
     <Content Include="Views\Atleta\_GridAtletas.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TelaAtleta.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TelaInstrutor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
