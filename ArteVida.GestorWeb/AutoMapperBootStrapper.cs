@@ -12,10 +12,11 @@ namespace ArteVida.GestorWeb
             Mapper.CreateMap<TabelaAuxiliarViewModel, TabelaAuxiliar>();
             Mapper.CreateMap<TabelaAuxiliar, TabelaAuxiliarViewModel>();
 
-
-
             Mapper.CreateMap<PessoaViewModel, Pessoa>();
             Mapper.CreateMap<Pessoa, PessoaViewModel>();
+
+            Mapper.CreateMap<AtletaViewModel, Atleta>();
+            Mapper.CreateMap<Atleta, AtletaViewModel>();
 
 
 

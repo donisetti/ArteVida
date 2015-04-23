@@ -1,0 +1,24 @@
+﻿@model ArteVida.GestorWeb.ViewModels.ImagemViewModel
+
+<form action="" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true);
+
+    <div>
+        @Html.LabelFor(m => m.Titulo)
+        @Html.EditorFor(m => m.Titulo)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Alternativo)
+        @Html.EditorFor(m => m.Alternativo)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Legenda)
+        @Html.EditorFor(m => m.Legenda)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.ImagemUpload)
+        @Html.EditorFor(m => m.ImagemUpload)
+    </div>
+    <button type="submit">Criar</button>
+</form>

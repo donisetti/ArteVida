@@ -51,6 +51,7 @@
     <Compile Include="Entidades\Atleta.cs" />
     <Compile Include="Entidades\Empresa.cs" />
     <Compile Include="Entidades\Entidade.cs" />
+    <Compile Include="Entidades\Imagem.cs" />
     <Compile Include="Entidades\Instrutor.cs" />
     <Compile Include="Entidades\Pessoa.cs" />
     <Compile Include="Entidades\Produto.cs" />

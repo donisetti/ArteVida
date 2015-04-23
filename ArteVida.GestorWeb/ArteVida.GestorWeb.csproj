@@ -202,6 +202,7 @@
     <Compile Include="Controllers\Cadastros\CadastroController.cs" />
     <Compile Include="Controllers\Cadastros\InstrutorController.cs" />
     <Compile Include="Controllers\Cadastros\PessoaController.cs" />
+    <Compile Include="Controllers\ImagemController.cs" />
     <Compile Include="Controllers\ListagemGeralController.cs" />
     <Compile Include="Controllers\Operacional\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -222,6 +223,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AtletaViewModel.cs" />
+    <Compile Include="ViewModels\ImagemViewModel.cs" />
     <Compile Include="ViewModels\PessoaViewModel.cs" />
     <Compile Include="ViewModels\TabelaAuxiliarViewModel.cs" />
     <Compile Include="ViewModels\TransporteViewModel.cs" />
@@ -1179,11 +1181,14 @@
     <Content Include="Views\Atleta\_GridAtletas.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TelaAtleta.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TelaInstrutor.cshtml" />
+    <Content Include="Views\Imagem\Create.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Upload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Dados\" />
     <Folder Include="docs\" />
+    <Folder Include="Imagem\" />
     <Folder Include="Views\Cadastro\" />
     <Folder Include="Views\Instrutor\" />
   </ItemGroup>
