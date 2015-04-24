@@ -31,9 +31,19 @@
             @Html.LabelFor(model => model.Endereco)
         </div>
 
-        <div class="col-sm-10">
+        <div class="col-sm-6">
             @Html.EditorFor(model => model.Endereco)
             @Html.ValidationMessageFor(model => model.Endereco)
+
+        </div>
+
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Telefone)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
 
         </div>
 
@@ -67,7 +77,7 @@
             @Html.LabelFor(model => model.Estado)
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             @Html.EditorFor(model => model.Estado)
             @Html.ValidationMessageFor(model => model.Estado)
 
@@ -122,22 +132,74 @@
 
     </div>
 
+    <div class="row">
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Escola)
+        </div>
 
-    @*<div class="row">
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Email)
+        <div class="col-sm-5">
+            @Html.EditorFor(model => model.Escola)
+            @Html.ValidationMessageFor(model => model.Escola)
 
-            </div>
+        </div>
 
-            <div class="col-sm-5">
-                @Html.EditorFor(model => model.Email)
-                @Html.ValidationMessageFor(model => model.Email)
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.Serie)
+        </div>
 
-            </div>
-        </div>*@
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Serie)
+            @Html.ValidationMessageFor(model => model.Serie)
+
+        </div>
+
+
+    </div>
 
     <div class="row">
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Pai)
+        </div>
 
+        <div class="col-sm-5">
+            @Html.EditorFor(model => model.Pai)
+            @Html.ValidationMessageFor(model => model.Pai)
+
+        </div>
+
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.TelefonePai)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.TelefonePai)
+            @Html.ValidationMessageFor(model => model.TelefonePai)
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Mae)
+        </div>
+
+        <div class="col-sm-5">
+            @Html.EditorFor(model => model.Mae)
+            @Html.ValidationMessageFor(model => model.Mae)
+
+        </div>
+
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.TelefoneMae)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.TelefoneMae)
+            @Html.ValidationMessageFor(model => model.TelefoneMae)
+
+        </div>
 
 
     </div>
@@ -172,9 +234,14 @@
         width: 100%;
     }
 
+    .k-combobox {
+        max-width: none;
+        width: 100%;
+    }
+
+
     .k-editor-textarea {
         max-width: none;
         width: 100%;
     }
 </style>
-

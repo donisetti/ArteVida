@@ -36,11 +36,15 @@ namespace ArteVida.GestorWeb.ViewModels
         public string Telefone { get; set; }
         public string Escola { get; set; }
         public string Serie { get; set; }
+          [Display(Name = "Pai:")]
         public string Pai { get; set; }
         [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Pai:")]
         public string TelefonePai { get; set; }
+         [Display(Name = "Mãe:")]
         public string Mae { get; set; }
         [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telefone Mãe:")]
         public string TelefoneMae { get; set; }
         public string Tipo { get; set; }
     }
