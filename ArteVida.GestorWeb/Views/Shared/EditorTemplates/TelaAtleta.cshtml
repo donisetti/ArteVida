@@ -203,6 +203,30 @@
 
 
     </div>
+    
+    <div class="row">
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Modalidade)
+        </div>
+
+        <div class="col-sm-5">
+            @Html.EditorFor(model => model.Modalidade)
+            @Html.ValidationMessageFor(model => model.Modalidade)
+
+        </div>
+
+        <div class="col-sm-2">
+            @Html.LabelFor(model => model.DataCadastro)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.DataCadastro)
+            @Html.ValidationMessageFor(model => model.DataCadastro)
+
+        </div>
+
+
+    </div>
 
 
 </div>
