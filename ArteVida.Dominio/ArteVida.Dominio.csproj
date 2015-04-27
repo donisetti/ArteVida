@@ -51,6 +51,7 @@
     <Compile Include="Entidades\Atleta.cs" />
     <Compile Include="Entidades\Empresa.cs" />
     <Compile Include="Entidades\Entidade.cs" />
+    <Compile Include="Entidades\Evento.cs" />
     <Compile Include="Entidades\Imagem.cs" />
     <Compile Include="Entidades\Instrutor.cs" />
     <Compile Include="Entidades\Pessoa.cs" />
@@ -71,6 +72,10 @@
     <Compile Include="Migrations\201504181812258_revisao03.cs" />
     <Compile Include="Migrations\201504181812258_revisao03.Designer.cs">
       <DependentUpon>201504181812258_revisao03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504271805085_TabelaEventos.cs" />
+    <Compile Include="Migrations\201504271805085_TabelaEventos.Designer.cs">
+      <DependentUpon>201504271805085_TabelaEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504181812258_revisao03.resx">
       <DependentUpon>201504181812258_revisao03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504271805085_TabelaEventos.resx">
+      <DependentUpon>201504271805085_TabelaEventos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
