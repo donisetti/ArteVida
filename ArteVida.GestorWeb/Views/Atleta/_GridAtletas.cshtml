@@ -22,9 +22,9 @@
     .DataSource(dataSource => dataSource.Ajax()
     .Model(model => model.Id(c => c.PessoaId))
             .Read("Ler", "Atleta")
-                    .Create("Incluir", "Atleta")
-                        .Update("Atualizar", "Atleta")
-                        .Destroy("Excluir", "Atleta"))
+            .Create("Incluir", "Atleta")
+            .Update("Atualizar", "Atleta")
+            .Destroy("Excluir", "Atleta"))
 
     .Columns(cols =>
     {

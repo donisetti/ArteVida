@@ -7,9 +7,9 @@ using ArteVida.GestorWeb.ViewModels;
 
 namespace ArteVida.GestorWeb.Controllers.Cadastros
 {
-    public class InstrutorController : Controller
+    public class EventoController : Controller
     {
-        // GET: Instrutor
+        // GET: Evento
         public ActionResult Index()
         {
             return View();
@@ -18,7 +18,7 @@ namespace ArteVida.GestorWeb.Controllers.Cadastros
         public ActionResult Consulta()
         {
 
-            var model = new JanelaViewModel { Titulo = "Cadastro de Instrutor", Relatorio = "ListagemInstrutores.trdx", Tela = "_GridInstrutor" };
+            var model = new JanelaViewModel { Titulo = "Cadastro de Eventos", Relatorio = "ListagemEventos.trdx", Tela = "_GridEventos" };
             return View("_ConsultaBase", model);
         }
     }

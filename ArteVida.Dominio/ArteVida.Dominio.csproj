@@ -77,12 +77,17 @@
     <Compile Include="Migrations\201504271805085_TabelaEventos.Designer.cs">
       <DependentUpon>201504271805085_TabelaEventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504271835059_TabelaEventos2.cs" />
+    <Compile Include="Migrations\201504271835059_TabelaEventos2.Designer.cs">
+      <DependentUpon>201504271835059_TabelaEventos2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\IRepositorio.cs" />
     <Compile Include="Repositorio\IUnitOfWork.cs" />
     <Compile Include="Repositorio\Repositorio.cs" />
     <Compile Include="Repositorio\RepositorioAtleta.cs" />
+    <Compile Include="Repositorio\RepositorioEvento.cs" />
     <Compile Include="Repositorio\RepositorioPessoa.cs" />
     <Compile Include="Repositorio\RepositorioTabelaAuxiliar.cs" />
     <Compile Include="Utilitarios\Extenso.cs" />
@@ -108,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504271805085_TabelaEventos.resx">
       <DependentUpon>201504271805085_TabelaEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504271835059_TabelaEventos2.resx">
+      <DependentUpon>201504271835059_TabelaEventos2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
