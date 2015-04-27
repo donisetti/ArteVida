@@ -31,17 +31,18 @@
         cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })).Width(20);
 
 
-        cols.Bound(c => c.Nome).Width(150).Title("Nome do Atleta");
-        cols.Bound(c => c.Idade).Width(50).Title("Idade");
-        cols.Bound(c => c.Endereco).Width(150).Title("Endereço");
-        cols.Bound(c => c.Cidade).Width(100).Title("Cidade");
+        cols.Bound(c => c.Nome).Width(170).Title("Atleta");
+   
+   
+        cols.Bound(c => c.Pai).Width(150).Title("Pai");
+        cols.Bound(c => c.TelefonePai).Width(70).Title("Telefone");
 
-        cols.Bound(c => c.Pai).Width(100).Title("Nome do Pai");
-        cols.Bound(c => c.TelefonePai).Width(70).Title("Telefone do Pai");
+        cols.Bound(c => c.Mae).Width(150).Title("Mãe");
 
-        cols.Bound(c => c.Mae).Width(100).Title("Nome do Mãe");
-
-        cols.Bound(c => c.TelefoneMae).Width(70).Title("Telefone do Mãe");
+        cols.Bound(c => c.TelefoneMae).Width(70).Title("Telefone");
+      
+        cols.Bound(c => c.Modalidade).Width(70).Title("Modalidade");
+        cols.Bound(c => c.Sexo).Width(60).Title("Sexo");
 
 
        
