@@ -474,6 +474,9 @@
     <Content Include="Images\logo_med.png" />
     <Content Include="Images\logo_medio.png" />
     <Content Include="Images\Teste.html" />
+    <Content Include="Irmaos.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ReportViewer\js\ReportViewer-8.0.14.225.js" />
     <Content Include="ReportViewer\js\ReportViewer-8.0.14.225.min.js" />
     <Content Include="ReportViewer\styles\ReportViewer-8.0.14.225.css" />

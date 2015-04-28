@@ -54,6 +54,7 @@
     <Compile Include="Entidades\Evento.cs" />
     <Compile Include="Entidades\Imagem.cs" />
     <Compile Include="Entidades\Instrutor.cs" />
+    <Compile Include="Entidades\Irmao.cs" />
     <Compile Include="Entidades\Pessoa.cs" />
     <Compile Include="Entidades\Produto.cs" />
     <Compile Include="Entidades\TabelaAuxiliar.cs" />
@@ -80,6 +81,14 @@
     <Compile Include="Migrations\201504271835059_TabelaEventos2.cs" />
     <Compile Include="Migrations\201504271835059_TabelaEventos2.Designer.cs">
       <DependentUpon>201504271835059_TabelaEventos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504281707593_tabelairmaos.cs" />
+    <Compile Include="Migrations\201504281707593_tabelairmaos.Designer.cs">
+      <DependentUpon>201504281707593_tabelairmaos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504281724454_tabelairmaosrevisao.cs" />
+    <Compile Include="Migrations\201504281724454_tabelairmaosrevisao.Designer.cs">
+      <DependentUpon>201504281724454_tabelairmaosrevisao.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504271835059_TabelaEventos2.resx">
       <DependentUpon>201504271835059_TabelaEventos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504281707593_tabelairmaos.resx">
+      <DependentUpon>201504281707593_tabelairmaos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504281724454_tabelairmaosrevisao.resx">
+      <DependentUpon>201504281724454_tabelairmaosrevisao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -60,6 +60,7 @@ namespace ArteVida.Dominio.Contexto
             //modelBuilder.Configurations.Add(new PessoaJuridicaConfiguracao());
             modelBuilder.Configurations.Add(new AtletaConfiguracao());
             modelBuilder.Configurations.Add(new InstrutorConfiguracao());
+            modelBuilder.Configurations.Add(new IrmaoConfiguracao());
 
 
 

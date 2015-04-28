@@ -14,7 +14,7 @@ namespace ArteVida.GestorWeb.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Versao = "Arte e Vida : 1.00.6 - 27/04/2015 18:00 ";
+            ViewBag.Versao = "Arte e Vida : 1.00.6 - 28/04/2015 15:18 ";
 
             //ViewBag.Extenso = Extenso.ToExtenso(245765.32, Extenso.TipoValorExtenso.Monetario);
 

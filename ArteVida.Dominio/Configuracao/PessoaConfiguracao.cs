@@ -25,6 +25,26 @@ namespace ArteVida.Dominio.Configuracao
     }
 
 
+    public class IrmaoConfiguracao : EntityTypeConfiguration<Irmao>
+    {
+        public IrmaoConfiguracao()
+        {
+            ToTable("Irmaos");
+
+            HasKey(p => p.IrmaoId);
+
+            Property(p => p.IrmaoId)
+            .HasColumnName("IrmaoId")
+            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+            Property(p => p.Nome)
+               .IsRequired()
+               .HasMaxLength(250);
+
+
+        }
+    }
+
     public class AtletaConfiguracao : EntityTypeConfiguration<Atleta>
     {
         public AtletaConfiguracao()
