@@ -14,18 +14,18 @@ using ArteVida.GestorWeb.ViewModels;
 
 namespace ArteVida.GestorWeb.Controllers
 {
-    public class AtletaController : Controller
+    public class IrmaoController : Controller
     {
 
         private DbContexto _contexto;
-        private RepositorioAtleta _repositorio;
+        private RepositorioIrmao _repositorio;
 
 
 
-        public AtletaController()
+        public IrmaoController()
         {
             _contexto = new DbContexto();
-            _repositorio = new RepositorioAtleta(_contexto);
+            _repositorio = new RepositorioIrmao(_contexto);
 
 
             // ViewData["Funcionarios"] = _repositorioFuncionario.ObterTodos().Select(c => new { Id = c.PessoaId, Nome = c.Nome }).OrderBy(x=>x.Nome);           
@@ -40,7 +40,7 @@ namespace ArteVida.GestorWeb.Controllers
         public ActionResult Consulta()
         {
 
-            var model = new JanelaViewModel { Titulo = "Cadastro de Atletas", Relatorio = "ListagemAtletas.trdx", Tela = "_GridAtletas" };
+            var model = new JanelaViewModel { Titulo = "Cadastro de Irmaos", Relatorio = "ListagemIrmaos.trdx", Tela = "_GridIrmaos" };
             return View("_ConsultaBase", model);
         }
 
@@ -48,19 +48,19 @@ namespace ArteVida.GestorWeb.Controllers
 
         public ActionResult Ler([DataSourceRequest] DataSourceRequest request)
         {
-            return Json(PegarAtletas().ToDataSourceResult(request));
+            return Json(PegarIrmaos().ToDataSourceResult(request));
         }
 
 
 
 
 
-        private IQueryable<AtletaViewModel> PegarAtletas(string tipo = "Todos")
+        private IQueryable<IrmaoViewModel> PegarIrmaos(string tipo = "Todos")
         {
             if (tipo != "Todos")
             {
 
-                var dados = _repositorio.ObterTodos().Project().To<AtletaViewModel>();
+                var dados = _repositorio.ObterTodos().Project().To<IrmaoViewModel>();
 
 
                 return dados;
@@ -68,7 +68,7 @@ namespace ArteVida.GestorWeb.Controllers
             else
             {
 
-                var dados = _repositorio.ObterTodos().Project().To<AtletaViewModel>();
+                var dados = _repositorio.ObterTodos().Project().To<IrmaoViewModel>();
 
 
                 return dados;
@@ -78,7 +78,7 @@ namespace ArteVida.GestorWeb.Controllers
 
 
 
-        public ActionResult Incluir([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
+        public ActionResult Incluir([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
         {
 
 
@@ -87,10 +87,10 @@ namespace ArteVida.GestorWeb.Controllers
 
                 try
                 {
-                    Atleta dados = Mapper.Map<Atleta>(item);
+                    Irmao dados = Mapper.Map<Irmao>(item);
                     _repositorio.Inserir(dados);
                     _contexto.SaveChanges();
-                    item.PessoaId = dados.PessoaId;
+                    item.IrmaoId = dados.IrmaoId;
                 }
                 catch (Exception erro)
                 {
@@ -113,17 +113,17 @@ namespace ArteVida.GestorWeb.Controllers
         }
 
 
-        public ActionResult Atualizar([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
+        public ActionResult Atualizar([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
         {
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    Atleta dados = Mapper.Map<Atleta>(item);
+                    Irmao dados = Mapper.Map<Irmao>(item);
                     dados = _repositorio.Atualizar(dados);
                     _contexto.Commit();
-                    item.PessoaId = dados.PessoaId;
+                    item.IrmaoId = dados.IrmaoId;
                 }
                 catch (Exception erro)
                 {
@@ -138,11 +138,11 @@ namespace ArteVida.GestorWeb.Controllers
 
         }
 
-        public ActionResult Excluir([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
+        public ActionResult Excluir([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
         {
             try
             {
-                _contexto.Atletas.Remove(_contexto.Atletas.Find(item.PessoaId));
+                _contexto.Irmoes.Remove(_contexto.Irmoes.Find(item.IrmaoId));
                 _contexto.SaveChanges();
                 ModelState.IsValidField("true");
             }

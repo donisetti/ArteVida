@@ -18,6 +18,10 @@ namespace ArteVida.GestorWeb
             Mapper.CreateMap<AtletaViewModel, Atleta>();
             Mapper.CreateMap<Atleta, AtletaViewModel>();
 
+            Mapper.CreateMap<IrmaoViewModel, Irmao>();
+            Mapper.CreateMap<Irmao, IrmaoViewModel>();
+
+
 
 
 

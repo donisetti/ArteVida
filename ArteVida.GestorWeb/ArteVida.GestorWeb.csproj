@@ -202,6 +202,7 @@
     <Compile Include="Controllers\Cadastros\CadastroController.cs" />
     <Compile Include="Controllers\Cadastros\EventoController.cs" />
     <Compile Include="Controllers\Cadastros\InstrutorController.cs" />
+    <Compile Include="Controllers\Cadastros\IrmaoController.cs" />
     <Compile Include="Controllers\Cadastros\PessoaController.cs" />
     <Compile Include="Controllers\ImagemController.cs" />
     <Compile Include="Controllers\ListagemGeralController.cs" />
@@ -226,6 +227,7 @@
     <Compile Include="ViewModels\AtletaViewModel.cs" />
     <Compile Include="ViewModels\EventoViewModel.cs" />
     <Compile Include="ViewModels\ImagemViewModel.cs" />
+    <Compile Include="ViewModels\IrmaoViewModel.cs" />
     <Compile Include="ViewModels\PessoaViewModel.cs" />
     <Compile Include="ViewModels\TabelaAuxiliarViewModel.cs" />
     <Compile Include="ViewModels\TransporteViewModel.cs" />
@@ -1189,6 +1191,7 @@
     <Content Include="Views\Imagem\Create.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Upload.cshtml" />
     <Content Include="Views\Evento\_GridEventos.cshtml" />
+    <Content Include="Views\Shared\_GridIrmaos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1197,6 +1200,7 @@
     <Folder Include="Imagem\" />
     <Folder Include="Views\Cadastro\" />
     <Folder Include="Views\Instrutor\" />
+    <Folder Include="Views\Irmao\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

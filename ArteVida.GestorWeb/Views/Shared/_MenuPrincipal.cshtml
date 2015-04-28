@@ -10,6 +10,7 @@
                     cad.Add().Text("Dados Pessoais").Items(pessoa =>
                     {
                         pessoa.Add().Text("Pessoas").Action("Consulta", "Pessoa");
+                        pessoa.Add().Text("Irmãos").Action("Consulta", "Irmao");
                         pessoa.Add().Text("Empresas").Action("Index", "Empresa");
                     });
 

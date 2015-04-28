@@ -29,6 +29,8 @@ namespace ArteVida.Dominio.Contexto
         public DbSet<TabelaAuxiliar> TabelasAuxiliares { get; set; }
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Atleta> Atletas { get; set; }
+
+        public DbSet<Irmao> Irmoes { get; set; }
         public DbSet<Instrutor> Instrutores { get; set; }
 
         public DbSet<Empresa> Empresas { get; set; }
