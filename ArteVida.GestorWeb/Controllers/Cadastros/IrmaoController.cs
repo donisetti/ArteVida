@@ -19,8 +19,9 @@ namespace ArteVida.GestorWeb.Controllers
 
         private DbContexto _contexto;
         private RepositorioIrmao _repositorio;
+        private RepositorioAtleta _repositorioAtleta;
 
-
+        private int _AtletaId;
 
         public IrmaoController()
         {
@@ -29,7 +30,7 @@ namespace ArteVida.GestorWeb.Controllers
 
 
             // ViewData["Funcionarios"] = _repositorioFuncionario.ObterTodos().Select(c => new { Id = c.PessoaId, Nome = c.Nome }).OrderBy(x=>x.Nome);           
-
+         
         }
 
         public ActionResult Index()
@@ -46,8 +47,9 @@ namespace ArteVida.GestorWeb.Controllers
 
 
 
-        public ActionResult Ler([DataSourceRequest] DataSourceRequest request)
+        public ActionResult Ler([DataSourceRequest] DataSourceRequest request, string id)
         {
+            _AtletaId = int.Parse(id);
             return Json(PegarIrmaos().ToDataSourceResult(request));
         }
 
@@ -55,25 +57,12 @@ namespace ArteVida.GestorWeb.Controllers
 
 
 
-        private IQueryable<IrmaoViewModel> PegarIrmaos(string tipo = "Todos")
+        private IQueryable<IrmaoViewModel> PegarIrmaos()
         {
-            if (tipo != "Todos")
-            {
-
-                var dados = _repositorio.ObterTodos().Project().To<IrmaoViewModel>();
-
-
-                return dados;
-            }
-            else
-            {
-
-                var dados = _repositorio.ObterTodos().Project().To<IrmaoViewModel>();
-
+            var dados = _repositorio.ObterTodos().Where(x => x.Atleta.PessoaId == _AtletaId).Project().To<IrmaoViewModel>();
 
                 return dados;
 
-            }
         }
 
 

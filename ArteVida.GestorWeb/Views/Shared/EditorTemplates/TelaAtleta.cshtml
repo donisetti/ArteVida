@@ -1,7 +1,7 @@
 ﻿@using ArteVida.GestorWeb.ViewModels
 @model ArteVida.GestorWeb.ViewModels.AtletaViewModel
 
-@Html.HiddenFor(model => model.PessoaId)
+@Html.HiddenFor(model => model.PessoaId, new { id = "AtletaId" })
 
 <div id="campos" style="width:830px;padding:5px; ">
     <div id="telatab">
@@ -206,6 +206,14 @@
         )
     </div>
 </div>
+
+<script>
+    function PegaID() {
+        return { id: $("#AtletaId").val() };
+    }
+
+   
+</script>
 
 <style scoped>
     .k-edit-form {
