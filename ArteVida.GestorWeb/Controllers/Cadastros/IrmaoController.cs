@@ -45,11 +45,21 @@ namespace ArteVida.GestorWeb.Controllers
             return View("_ConsultaBase", model);
         }
 
+        //public ActionResult Ler([DataSourceRequest] DataSourceRequest request)
+        //{
+        //    _AtletaId = 1;
+        //    //_AtletaId = int.Parse(id);
 
 
-        public ActionResult Ler([DataSourceRequest] DataSourceRequest request, string id)
+        //    return Json(PegarIrmaos().ToDataSourceResult(request));
+        //}
+
+        public ActionResult Ler([DataSourceRequest] DataSourceRequest request, int id)
         {
-            _AtletaId = int.Parse(id);
+            _AtletaId = id;
+            //_AtletaId = int.Parse(id);
+
+
             return Json(PegarIrmaos().ToDataSourceResult(request));
         }
 
@@ -59,6 +69,7 @@ namespace ArteVida.GestorWeb.Controllers
 
         private IQueryable<IrmaoViewModel> PegarIrmaos()
         {
+
             var dados = _repositorio.ObterTodos().Where(x => x.Atleta.PessoaId == _AtletaId).Project().To<IrmaoViewModel>();
 
                 return dados;

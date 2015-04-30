@@ -1,19 +1,22 @@
 ﻿@using ArteVida.GestorWeb.ViewModels
 @model ArteVida.GestorWeb.ViewModels.AtletaViewModel
 
-@Html.HiddenFor(model => model.PessoaId, new { id = "AtletaId" })
+@Html.HiddenFor(model => model.PessoaId, new { id = "ID" })
+
 
 <div id="campos" style="width:830px;padding:5px; ">
     <div id="telatab">
         @(Html.Kendo().TabStrip()
-          .Name("tabstrip")
+                  .Name("tabstrip").Events(events => events.Select("onTxtbDatabound"))
           .Items(tabstrip =>
           {
               tabstrip.Add().Text("Atleta")
                   .Selected(true)
                   .Content(@<text>
+                    
+                                @*@Html.TextBoxFor(model => model.PessoaId,new { id = "AtletaId" })*@
 
-                    <div class="row">
+                                <div class="row">
 
                         <div class="col-sm-1">
                             @Html.LabelFor(model => model.Nome)
@@ -94,6 +97,7 @@
                                                   "Masculino",
                                                   "Feminino"
                                               })
+                                           
                                               .SelectedIndex(1)
                                               .Suggest(true)
                                               .HtmlAttributes(new { style = "width:150px" }))
@@ -207,13 +211,7 @@
     </div>
 </div>
 
-<script>
-    function PegaID() {
-        return { id: $("#AtletaId").val() };
-    }
 
-   
-</script>
 
 <style scoped>
     .k-edit-form {

@@ -1,4 +1,9 @@
 ﻿@using ArteVida.GestorWeb.ViewModels
+@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
+
+
+
+
 @(Html.Kendo().Grid<IrmaoViewModel>()
     .Name("GridIrmaos")
     .ToolBar(tb => tb.Create())
@@ -8,7 +13,7 @@
         .ButtonCount(20)
         )
     .Sortable()
-    .Filterable()
+    .Filterable().AutoBind(false)
 
     .Editable(ed =>
             {
@@ -21,12 +26,14 @@
     .Scrollable(scr => scr.Height(360))
     .DataSource(dataSource => dataSource.Ajax()
     .Model(model => model.Id(c => c.IrmaoId))
-                   // .Read("Ler", "Irmao")
-                    .Read(read => read.Action("Ler", "Irmao").Data("PegaID"))
-                    //.Create("Incluir", "Irmao")
-                     .Create(create => create.Action("Incluir", "Irmao").Data("PegaID"))
-                    .Update("Atualizar", "Irmao")
+                       // .Read("Ler", "Irmao", new {id= @Model.PessoaId})
+                        //.Create("Incluir", "Irmao")
+                          //   .Read(read => read.Action("Ler", "Irmao").Data("PegaID"))
+                                  .Read(read => read.Action("Ler", "Irmao").Data("PegaID"))
+                            .Create(create => create.Action("Incluir", "Irmao").Data("PegaID"))
+                        .Update("Atualizar", "Irmao")
                     .Destroy("Excluir", "Irmao")
+                       
                 )
 
     .Columns(cols =>

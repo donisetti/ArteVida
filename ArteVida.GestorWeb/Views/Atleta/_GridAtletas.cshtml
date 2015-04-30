@@ -9,17 +9,17 @@
         )
     .Sortable()
     .Filterable()
-
     .Editable(ed =>
-                    {
-                        ed.Mode(GridEditMode.PopUp).TemplateName("TelaAtleta");
-                        ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
-                        ed.Window(w => w.Title("Cadastro de Atletas"));
+        {
+            ed.Mode(GridEditMode.PopUp).TemplateName("TelaAtleta");
+            ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
+            ed.Window(w => w.Title("Cadastro de Atletas"));
 
-                    }
+        }
           )
     .Scrollable(scr => scr.Height(360))
-    .DataSource(dataSource => dataSource.Ajax()
+      
+    .DataSource(dataSource => dataSource.Ajax()        
     .Model(model => model.Id(c => c.PessoaId))
             .Read("Ler", "Atleta")
             .Create("Incluir", "Atleta")
@@ -28,9 +28,9 @@
 
     .Columns(cols =>
     {
-        cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })).Width(20);
-
-
+        cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })
+            ).Width(20);
+        cols.Bound(c => c.NumeroFicha).Width(70).Title("Ficha Nº");
         cols.Bound(c => c.Nome).Width(170).Title("Atleta");
    
    
