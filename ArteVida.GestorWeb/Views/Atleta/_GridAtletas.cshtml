@@ -4,7 +4,7 @@
     .ToolBar(tb => tb.Create())
     .Pageable(pg => pg
         .Refresh(true)
-        .PageSizes(true)
+            .PageSizes(new int[] { 10, 50, 100, 250 })
         .ButtonCount(20)
         )
     .Sortable()

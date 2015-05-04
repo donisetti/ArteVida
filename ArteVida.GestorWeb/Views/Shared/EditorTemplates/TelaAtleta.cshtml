@@ -7,16 +7,17 @@
 <div id="campos" style="width:830px;padding:5px; ">
     <div id="telatab">
         @(Html.Kendo().TabStrip()
-                  .Name("tabstrip").Events(events => events.Select("onTxtbDatabound"))
+                          .Name("tabstrip")
+                          .Events(events => events.Select("AtualizaGridIrmaos"))
           .Items(tabstrip =>
           {
               tabstrip.Add().Text("Atleta")
                   .Selected(true)
                   .Content(@<text>
-                    
-                                @*@Html.TextBoxFor(model => model.PessoaId,new { id = "AtletaId" })*@
 
-                                <div class="row">
+                    @*@Html.TextBoxFor(model => model.PessoaId,new { id = "AtletaId" })*@
+
+                    <div class="row">
 
                         <div class="col-sm-1">
                             @Html.LabelFor(model => model.Nome)
@@ -97,7 +98,7 @@
                                                   "Masculino",
                                                   "Feminino"
                                               })
-                                           
+
                                               .SelectedIndex(1)
                                               .Suggest(true)
                                               .HtmlAttributes(new { style = "width:150px" }))
@@ -202,10 +203,10 @@
               tabstrip.Add().Text(" Irmãos")
                   .Selected(false)
                   .Content(@<text>
-                               
-                                @Html.Partial("_GridIrmaos")
 
-                            </text>);
+                    @Html.Partial("_GridIrmaos")
+
+                </text>);
           })
         )
     </div>

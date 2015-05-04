@@ -23,9 +23,7 @@ namespace ArteVida.GestorWeb
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/Borgio.css"));
+           
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
@@ -40,6 +38,10 @@ namespace ArteVida.GestorWeb
             bundles.Add(new StyleBundle("~/Content/kendo/css").Include(
             "~/Content/kendo/kendo.common-bootstrap.min.css",
             "~/Content/kendo/kendo.bootstrap.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                     "~/Content/bootstrap.css",
+                     "~/Content/Borgio.css"));
 
             bundles.IgnoreList.Clear();
         }

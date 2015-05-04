@@ -10,7 +10,7 @@
                     cad.Add().Text("Dados Pessoais").Items(pessoa =>
                     {
                         pessoa.Add().Text("Pessoas").Action("Consulta", "Pessoa");
-                        pessoa.Add().Text("Irmãos").Action("Consulta", "Irmao");
+                   
                         pessoa.Add().Text("Empresas").Action("Index", "Empresa");
                     });
 
@@ -23,11 +23,11 @@
 
                     });
 
-                    cad.Add().Text("Dados Auxiliares").Items(auxiliar =>
-                    {
-                        auxiliar.Add().Text("Categoria").Action("Categoria", "TabelaAuxiliar");
+                    //cad.Add().Text("Dados Auxiliares").Items(auxiliar =>
+                    //{
+                    //    auxiliar.Add().Text("Categoria").Action("Categoria", "TabelaAuxiliar");
 
-                    });
+                    //});
 
 
 

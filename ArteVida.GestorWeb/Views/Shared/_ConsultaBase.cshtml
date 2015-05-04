@@ -1,6 +1,6 @@
 ﻿@model ArteVida.GestorWeb.ViewModels.JanelaViewModel
 
-<div class="divComportamento">
+<div >
     @{Html.Kendo().Window()
 
         .Name("telaConsulta")
@@ -21,16 +21,12 @@
 
 <script>
     function PegaID() {
-
-        var x = $("#ID").val();
-      //  alert(x);
-
         return { id: $("#ID").val() };
     }
 
 
 
-    function onTxtbDatabound() {
+    function AtualizaGridIrmaos() {
         $("#GridIrmaos").data('kendoGrid').dataSource.read();
         $("#GridIrmaos").data('kendoGrid').refresh();
     }
