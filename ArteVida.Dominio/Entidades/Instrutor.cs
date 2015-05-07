@@ -12,5 +12,9 @@ namespace ArteVida.Dominio.Entidades
        {
            this.Tipo = "Instrutor";
        }
+
+       public string Atividade { get; set; }
+       public string Profissao { get; set; }
+       public string Observacao { get; set; }
     }
 }

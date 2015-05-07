@@ -17,10 +17,10 @@ namespace ArteVida.Dominio.Contexto
             : base("ArteVidaDbContexto")
         {
                     #if DEBUG
-                         //       Database.SetInitializer(new CriarNovoBd());
+                       //        Database.SetInitializer(new CriarNovoBd());
                     #endif
 
-                     //        Database.SetInitializer(new CriarNovoBd());
+                             Database.SetInitializer(new CriarNovoBd());
         }
 
 

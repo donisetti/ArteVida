@@ -227,6 +227,7 @@
     <Compile Include="ViewModels\AtletaViewModel.cs" />
     <Compile Include="ViewModels\EventoViewModel.cs" />
     <Compile Include="ViewModels\ImagemViewModel.cs" />
+    <Compile Include="ViewModels\InstrutorViewModel.cs" />
     <Compile Include="ViewModels\IrmaoViewModel.cs" />
     <Compile Include="ViewModels\PessoaViewModel.cs" />
     <Compile Include="ViewModels\TabelaAuxiliarViewModel.cs" />
@@ -476,6 +477,9 @@
     <Content Include="Images\logo_med.png" />
     <Content Include="Images\logo_medio.png" />
     <Content Include="Images\Teste.html" />
+    <Content Include="Instrutor.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Irmaos.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1192,6 +1196,7 @@
     <Content Include="Views\Shared\EditorTemplates\Upload.cshtml" />
     <Content Include="Views\Evento\_GridEventos.cshtml" />
     <Content Include="Views\Shared\_GridIrmaos.cshtml" />
+    <Content Include="Views\Instrutor\_GridInstrutor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1199,7 +1204,6 @@
     <Folder Include="docs\" />
     <Folder Include="Imagem\" />
     <Folder Include="Views\Cadastro\" />
-    <Folder Include="Views\Instrutor\" />
     <Folder Include="Views\Irmao\" />
   </ItemGroup>
   <ItemGroup>

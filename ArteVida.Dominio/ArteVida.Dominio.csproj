@@ -90,6 +90,18 @@
     <Compile Include="Migrations\201504281724454_tabelairmaosrevisao.Designer.cs">
       <DependentUpon>201504281724454_tabelairmaosrevisao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505071339355_RevisaoInstrutor.cs" />
+    <Compile Include="Migrations\201505071339355_RevisaoInstrutor.Designer.cs">
+      <DependentUpon>201505071339355_RevisaoInstrutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071447532_RevisaoInstrutorPessoa.cs" />
+    <Compile Include="Migrations\201505071447532_RevisaoInstrutorPessoa.Designer.cs">
+      <DependentUpon>201505071447532_RevisaoInstrutorPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505071456354_RevisaoInstrutorPessoanulos.cs" />
+    <Compile Include="Migrations\201505071456354_RevisaoInstrutorPessoanulos.Designer.cs">
+      <DependentUpon>201505071456354_RevisaoInstrutorPessoanulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\IRepositorio.cs" />
@@ -132,6 +144,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201504281724454_tabelairmaosrevisao.resx">
       <DependentUpon>201504281724454_tabelairmaosrevisao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071339355_RevisaoInstrutor.resx">
+      <DependentUpon>201505071339355_RevisaoInstrutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071447532_RevisaoInstrutorPessoa.resx">
+      <DependentUpon>201505071447532_RevisaoInstrutorPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505071456354_RevisaoInstrutorPessoanulos.resx">
+      <DependentUpon>201505071456354_RevisaoInstrutorPessoanulos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

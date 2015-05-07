@@ -31,7 +31,7 @@ namespace ArteVida.GestorWeb.ViewModels
         public string Cpf { get; set; }
         //[StringLength(1)]
         public string Sexo { get; set; }
-        public int Idade { get; set; }
+        public int? Idade { get; set; }
         [DataType(DataType.PhoneNumber)]
         public string Telefone { get; set; }
         public string Escola { get; set; }

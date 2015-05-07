@@ -13,6 +13,7 @@ namespace ArteVida.Dominio.Entidades
         public int PessoaId { get; set; }
         public string NumeroFicha { get; set; }
         public string Nome { get; set; }
+        public string Email { get; set; }
         public string Endereco { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
@@ -24,7 +25,7 @@ namespace ArteVida.Dominio.Entidades
         public string Cpf { get; set; }
         //[StringLength(1)]
         public string Sexo { get; set; }
-        public int Idade { get; set; }
+        public int? Idade { get; set; }
         public string Telefone { get; set; }
         public string Escola { get; set; }
         public string Serie { get; set; }
