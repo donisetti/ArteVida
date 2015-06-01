@@ -1,2 +1,130 @@
 ﻿
-<h3>Instrutor</h3>
+@model ArteVida.GestorWeb.ViewModels.InstrutorViewModel
+
+@Html.HiddenFor(model => model.PessoaId)
+
+<div id="campos" style="width:550px;height:250px;padding:2px; ">
+
+    <div class="row">
+
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+
+        <div class="col-sm-7">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+
+        </div>
+
+    
+    </div>
+    <div class="row">
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Endereco)
+        </div>
+
+        <div class="col-sm-6">
+            @Html.EditorFor(model => model.Endereco)
+            @Html.ValidationMessageFor(model => model.Endereco)
+
+        </div>
+
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Telefone)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Telefone)
+            @Html.ValidationMessageFor(model => model.Telefone)
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+
+
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Bairro)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Bairro)
+            @Html.ValidationMessageFor(model => model.Bairro)
+
+        </div>
+
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Cidade)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Cidade)
+            @Html.ValidationMessageFor(model => model.Cidade)
+
+        </div>
+
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Estado)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Estado)
+            @Html.ValidationMessageFor(model => model.Estado)
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+ 
+
+
+</div>
+
+
+
+<style scoped>
+    .k-edit-form {
+        width: 850px;
+    }
+
+    .k-edit-form-container {
+        width: 850px;
+        /*height: 300px;*/
+    }
+
+    div.row {
+        width: 800px;
+        margin-top: 5px;
+    }
+
+    .label {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    .single-line {
+        max-width: none;
+        width: 100%;
+    }
+
+    .k-combobox {
+        max-width: none;
+        width: 100%;
+    }
+
+
+    .k-editor-textarea {
+        max-width: none;
+        width: 100%;
+    }
+</style>

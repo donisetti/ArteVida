@@ -109,6 +109,7 @@
     <Compile Include="Repositorio\Repositorio.cs" />
     <Compile Include="Repositorio\RepositorioAtleta.cs" />
     <Compile Include="Repositorio\RepositorioEvento.cs" />
+    <Compile Include="Repositorio\RepositorioInstrutor.cs" />
     <Compile Include="Repositorio\RepositorioIrmao.cs" />
     <Compile Include="Repositorio\RepositorioPessoa.cs" />
     <Compile Include="Repositorio\RepositorioTabelaAuxiliar.cs" />

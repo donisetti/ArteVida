@@ -21,6 +21,9 @@ namespace ArteVida.GestorWeb
             Mapper.CreateMap<IrmaoViewModel, Irmao>();
             Mapper.CreateMap<Irmao, IrmaoViewModel>();
 
+            Mapper.CreateMap<InstrutorViewModel, Instrutor>();
+            Mapper.CreateMap<Instrutor, InstrutorViewModel>();
+
 
 
 

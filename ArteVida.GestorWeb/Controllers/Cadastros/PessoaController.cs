@@ -142,7 +142,7 @@ namespace ArteVida.GestorWeb.Controllers
         {
             try
             {
-                _contexto.TabelasAuxiliares.Remove(_contexto.TabelasAuxiliares.Find(item.PessoaId));
+                _contexto.Pessoas.Remove(_contexto.Pessoas.Find(item.PessoaId));
                 _contexto.SaveChanges();
                 ModelState.IsValidField("true");
             }
