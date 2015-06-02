@@ -20,7 +20,7 @@ namespace ArteVida.Dominio.Contexto
                           //     Database.SetInitializer(new CriarNovoBd());
                     #endif
 
-            Database.SetInitializer(new CriarNovoBd());
+            //Database.SetInitializer(new CriarNovoBd());
         }
 
 

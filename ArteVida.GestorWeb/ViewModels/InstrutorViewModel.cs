@@ -23,11 +23,13 @@ namespace ArteVida.GestorWeb.ViewModels
 
         [Display(Name = "Data Cadastro")]
         public DateTime? DataCadastro { get; set; }
-
+        [Display(Name = "Atividades")]
+           [DataType(DataType.MultilineText)]
         public string Atividade { get; set; }
           [Display(Name = "Profissão")]
         public string Profissao { get; set; }
-          [Display(Name = "Observação")]
+          [Display(Name = "Observações")]
+          [DataType(DataType.MultilineText)]
         public string Observacao { get; set; }
        
     }

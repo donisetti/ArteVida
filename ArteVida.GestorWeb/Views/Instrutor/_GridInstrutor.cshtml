@@ -33,6 +33,7 @@
       
         cols.Bound(c => c.Nome).Width(170).Title("Instrutor");
         cols.Bound(c => c.Telefone).Width(70).Title("Telefone");
+        cols.Bound(c => c.Email).Width(70).Title("Email");
      
 
         cols.Command(cmd => cmd.Destroy().Text(" ").HtmlAttributes(new { title = "Excluir" })).Width(20);
