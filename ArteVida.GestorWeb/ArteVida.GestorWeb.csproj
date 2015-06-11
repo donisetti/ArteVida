@@ -1197,6 +1197,7 @@
     <Content Include="Views\Evento\_GridEventos.cshtml" />
     <Content Include="Views\Shared\_GridIrmaos.cshtml" />
     <Content Include="Views\Instrutor\_GridInstrutor.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TelaIrmao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
