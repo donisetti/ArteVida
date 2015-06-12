@@ -39,6 +39,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
@@ -495,6 +496,8 @@
     <Content Include="Content\kendo\images\kendoui.ttf" />
     <Content Include="Content\kendo\images\kendoui.woff" />
     <None Include="Properties\PublishProfiles\Amazon.pubxml" />
+    <None Include="Properties\PublishProfiles\artevida - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\artevida - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Borgio.pubxml" />
     <None Include="Properties\PublishProfiles\destakrh - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\destakrh - FTP.pubxml" />
