@@ -7,21 +7,28 @@
 
                 menu.Add().Text("Cadastro").Items(cad =>
                 {
-                    cad.Add().Text("Dados Pessoais").Items(pessoa =>
-                    {
-                        pessoa.Add().Text("Pessoas").Action("Consulta", "Pessoa");
+
+                    cad.Add().Text("Pessoas").Action("Consulta", "Pessoa");
+                    cad.Add().Text("Empresas").Action("Index", "Empresa");
+                    cad.Add().Text("Atletas").Action("Consulta", "Atleta");
+                    cad.Add().Text("Instrutores").Action("Consulta", "Instrutor");
+                    cad.Add().Text("Eventos").Action("Consulta", "Evento");
+                    
+                    //cad.Add().Text("Dados Pessoais").Items(pessoa =>
+                    //{
+                    //    pessoa.Add().Text("Pessoas").Action("Consulta", "Pessoa");
                    
-                        pessoa.Add().Text("Empresas").Action("Index", "Empresa");
-                    });
+                    //    pessoa.Add().Text("Empresas").Action("Index", "Empresa");
+                    //});
 
-                    cad.Add().Text("Dados Básicos").Items(basico =>
-                    {
+                    //cad.Add().Text("Dados Básicos").Items(basico =>
+                    //{
 
-                        basico.Add().Text("Atletas").Action("Consulta", "Atleta");
-                        basico.Add().Text("Instrutores").Action("Consulta", "Instrutor");
-                        basico.Add().Text("Eventos").Action("Consulta", "Evento");
+                    //    basico.Add().Text("Atletas").Action("Consulta", "Atleta");
+                    //    basico.Add().Text("Instrutores").Action("Consulta", "Instrutor");
+                    //    basico.Add().Text("Eventos").Action("Consulta", "Evento");
 
-                    });
+                    //});
 
                     //cad.Add().Text("Dados Auxiliares").Items(auxiliar =>
                     //{
