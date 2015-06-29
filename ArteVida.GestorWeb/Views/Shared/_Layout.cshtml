@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content jumbotron corpo">
+        <div class="container body-content jumbotron artevida corpo">
             @RenderBody()
         </div>
         <div class="container footer-content">
@@ -69,14 +69,57 @@
 
 <style scoped>
     .divComportamento {
-        width: 1000px;
+        width: 980px;
         height: 550px;
         position: relative;
         display: block;
         top: 50%;
         left: 50%;
-        margin-top: -250px;     
-        margin-left: -550px;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+    .consultabase {
+        width: 980px;
+    }
+
+    .k-edit-form {
+        width: 750px;
+    }
+
+    .k-edit-form-container {
+        width: 750px;
+        /*height: 300px;*/
+    }
+
+    div.row {
+        margin-top: 5px;
+    }
+
+    .label {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+
+    .single-line {
+        max-width: none;
+        width: 100%;
+    }
+
+    .k-combobox {
+        max-width: none;
+        width: 100%;
+    }
+
+    .k-dropdown {
+        max-width: none;
+        width: 100%;
+    }
+
+
+    .k-editor-textarea {
+        max-width: none;
+        width: 100%;
     }
 
     .k-button-icontext {
@@ -94,7 +137,7 @@
         position: relative;
         display: block;
         vertical-align: middle;
-        line-height: 0.5em;
+        /*line-height: 0.5em;*/
     }
 
     #reportViewer1 {
@@ -109,8 +152,7 @@
     }
 
 
-    #reportViewer1 .k-menu .k-item {
-        min-width: 60px;
-    }
-
+        #reportViewer1 .k-menu .k-item {
+            min-width: 60px;
+        }
 </style>

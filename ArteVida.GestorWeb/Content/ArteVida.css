@@ -1,36 +1,97 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 10px;
+﻿.artevida {
+  padding: 30px;
+  margin-bottom: 1px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {   
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: -30px;
+.artevida h1 {
+  line-height: 1;
+  color: inherit;
 }
 
-/*.footer-content {   
+.artevida p {
+  line-height: 1.4;
+}
+
+.container .artevida {
+
+  border-radius: 6px;
+}
+
+.consulta {
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+  /*.artevida {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .artevida {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .artevida h1 {
+    font-size: 63px;
+  }*/
+
+
+}
+
+
+
+
+nav  {
+    display: block;
+    font-size: 12px; /*Tamanho da fonte do menu*/
+    padding-top: 5px; /*deslocamento da barra de menu*/
+    margin-right: 15px; /*Margem direita da barra de menu*/
+   
+
+}
+
+footer {
+    clear: both;
+    background-color: #e2e2e2; /*Cor da barra do rodapé*/
+    font-size: .8em; /*Tamanho da fonte do rodapé*/
+    height: 20px; /*Altura do rodapé*/
+}
+
+.container 
+{
+    margin-top: 5px; /*Margem do Menu*/
+}
+.body-content {
+    margin-top: 1px; /*Margem do Body Principal*/
+    
+}
+.footer-content {   
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 1px;   
-}*/
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+}
+.float-left {
+    float: left;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.float-right {
+    float: right;
 }
 
-.corpo {
-    display: block;
-    height:490px;
-}
+
+ .telaCadastro
+ {  
+      position: relative;
+     display: block;
+     padding: 5px;
+     margin-left: 5px;
+ }
+
+
+
+
