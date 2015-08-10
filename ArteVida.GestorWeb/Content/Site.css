@@ -3,7 +3,7 @@
     padding-bottom: 10px;
 
      background-color: #fff;
-    /*background: url(../images/header-bg.png) repeat-x;*/
+    background: url(../images/header-bg.png) repeat-x;
     border-top: solid 10px #000;
     color: #333;
     /*font-size: .85em;
@@ -18,7 +18,7 @@
 .body-content {   
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: -30px;
+    padding-bottom: -10px;
 }
 
 /*.footer-content {   

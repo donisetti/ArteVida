@@ -13,7 +13,7 @@
         @Scripts.Render("~/bundles/jquery")
         @Styles.Render("~/Content/kendo/css")
         @Scripts.Render("~/bundles/kendo")
-        <link href="~/Content/Artevida.css" rel="stylesheet" />
+        @*<link href="~/Content/Artevida.css" rel="stylesheet" />*@
         <script src="@Url.Content("~/Scripts/kendo/cultures/kendo.culture.pt-BR.min.js")"></script>
         <script>
             kendo.culture("pt-BR"); // Alterar Cultura para Português do Brasil
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content jumbotron artevida corpo">
+        <div class="container body-content jumbotron artevida ">
             @RenderBody()
         </div>
         <div class="container footer-content">
