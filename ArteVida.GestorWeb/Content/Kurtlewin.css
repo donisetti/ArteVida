@@ -1,11 +1,71 @@
-﻿
+﻿* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.painel-interno {
+  width: 835px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.kurtlewin {
+  padding: 30px;
+  margin-bottom: 1px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: inherit;
+  background-color: #eeeeee;
+}
+
+.kurtlewin h1 {
+  line-height: 1;
+  color: inherit;
+}
+
+.kurtlewin p {
+  line-height: 1.4;
+}
+
+.container .kurtlewin {
+
+  border-radius: 6px;
+}
+
+.consulta {
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+  /*.kurtlewin {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .kurtlewin {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .kurtlewin h1 {
+    font-size: 63px;
+  }*/
+
+
+}
+
+
+
+
 nav  {
     display: block;
     font-size: 12px; /*Tamanho da fonte do menu*/
-    padding-top: 5px; /*deslocamento da barra de menu*/
-    margin-right: 15px; /*Margem direita da barra de menu*/
-   
-
+    padding-top: 1px; /*deslocamento da barra de menu*/
+    margin-right: 1px; /*Margem direita da barra de menu*/
+    
 }
 
 footer {
@@ -20,14 +80,17 @@ footer {
     margin-top: 5px; /*Margem do Menu*/
 }
 .body-content {
-    margin-top: 1px; /*Margem do Body Principal*/
+    margin-top: 60px; /*Margem do Body Principal*/
+    margin-bottom: 1px; /*Margem do Body Principal*/
     
 }
+
 .footer-content {   
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 1px;   
 }
+
 .float-left {
     float: left;
 }
@@ -36,94 +99,37 @@ footer {
     float: right;
 }
 
- /*.DivAlinhamentoTelaCadastro
- {
-     width: auto;
-     height: 450px;
 
-     top: -13%;
-     left: -1%;
-     position: relative;
-     display: block
- }*/
-
- .DivAlinhamentoTelaCadastro
+ .telaCadastro
  {  
-     width: auto;
-     height: auto;
-
-     /*top: -13%;*/
-     top:50%;
-     margin-top:-285px;
-     position: relative;
+     position:relative;
+     padding-top: -60%;
+     /*left: 50%;*/
+     width: 730px;
      display: block;
-     
-      left:50%;
-     margin-left:-450px;
-
+     padding: 5px;
+     margin-left: 5px;
  }
- .DivAlinhamentoTelaCadastro h1 {
-      line-height:1;color:inherit
-  }
-  .DivAlinhamentoTelaCadastro p {
-      line-height:1.4
-  }
-  .container 
-  .DivAlinhamentoTelaCadastro {
-      border-radius:6px
-  }
 
-
-  .DivAlinhamentoOperacional
+ .telaConsulta
  {  
-     width: auto;
-     height: auto;
-
-     /*top: -13%;*/
-     top:50%;
-     margin-top:-285px;
-     position: relative;
+     position: relative; 
+     padding-top: -60%;   
+     width: 980px;     
      display: block;
-     
-      left:50%;
-     margin-left:-450px;
-
+     padding: 5px;
+     margin-left: 5px;
  }
-  .DivAlinhamentoOperacional h1 {
-      line-height:1;color:inherit
-  }
-  .DivAlinhamentoOperacional p {
-      line-height:1.4
-  }
-  .container 
-  .DivAlinhamentoOperacional {
-      border-radius:6px
-  }
 
-
-  .DivAlinhamentoRelatorios
+  .telaRelatorio
  {  
-     width: auto;
-     height: auto;
-
-     /*top: -13%;*/
-     top:50%;
-     margin-top:-285px;
      position: relative;
+     width: 980px;
      display: block;
-     
-      left:50%;
-     margin-left:-450px;
-
+     padding: 5px;
+     margin-left: 5px;
  }
-  .DivAlinhamentoRelatorios h1 {
-      line-height:1;color:inherit
-  }
-  .DivAlinhamentoRelatorios p {
-      line-height:1.4
-  }
-  .container 
-  .DivAlinhamentoRelatorios {
-      border-radius:6px
-  }
+
+
+
 

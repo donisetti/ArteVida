@@ -14,25 +14,10 @@ namespace ArteVida.GestorWeb.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Versao = "Arte e Vida : 1.00.10 - 10/08/2015 16:47 ";
-
-            //ViewBag.Extenso = Extenso.ToExtenso(245765.32, Extenso.TipoValorExtenso.Monetario);
-
+            ViewBag.Versao = "Arte e Vida : 1.00.10 - 23/10/2015 15:00 ";
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "";
-
-            return View();
-        }
+       
     }
 }

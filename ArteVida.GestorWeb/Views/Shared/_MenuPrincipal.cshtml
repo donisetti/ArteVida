@@ -1,45 +1,48 @@
 ﻿@using Microsoft.Win32
+
 @(Html.Kendo().Menu()
-            .Name("menu_principal")
-            .Items(menu =>
+        .Name("menu_principal")
+        .Items(menu =>
+        {
+
+
+            menu.Add().Text("Cadastro").Items(cad =>
             {
 
-
-                menu.Add().Text("Cadastro").Items(cad =>
-                {
-
                 
-                    cad.Add().Text("Atletas").Action("Consulta", "Atleta");
-                    cad.Add().Text("Instrutores").Action("Consulta", "Instrutor");
-                    cad.Add().Text("Eventos").Action("Consulta", "Evento");
-                    cad.Add().Text("Pessoas").Action("Consulta", "Pessoa");
-                   // cad.Add().Text("Empresas").Action("Index", "Empresa");
+                cad.Add().Text("Atletas").Action("Consulta", "Atleta");
+                cad.Add().Text("Instrutores").Action("Consulta", "Instrutor");
+                cad.Add().Text("Eventos").Action("Consulta", "Evento");
+                cad.Add().Text("Pessoas").Action("Consulta", "Pessoa");
+                // cad.Add().Text("Empresas").Action("Index", "Empresa");
                   
 
-                });
+            });
 
               
 
 
 
-                menu.Add().Text("Relatórios").Items(rela =>
+            menu.Add().Text("Relatórios").Items(rela =>
+            {
+                rela.Add().Text("Listagem Geral").Items(lista =>
                 {
-                    rela.Add().Text("Listagem Geral").Items(lista =>
-                    {
-                        lista.Add().Text("Listagem de Dados Auxiliares").Action("ListaTabAuxiliar", "ListagemGeral");
-                        lista.Add().Text("Listagem de Atletas").Action("Clientes", "ListagemGeral");
-                        lista.Add().Text("Listagem de Fornecedores").Action("Operadoras", "ListagemGeral");
+                    lista.Add().Text("Listagem de Dados Auxiliares").Action("ListaTabAuxiliar", "ListagemGeral");
+                    lista.Add().Text("Listagem de Atletas").Action("Clientes", "ListagemGeral");
+                    lista.Add().Text("Listagem de Fornecedores").Action("Operadoras", "ListagemGeral");
 
 
-                    });
-
-                    rela.Add().Text("Gerenciais").Items(ger =>
-                    {
-                        ger.Add().Text("Listagem de Compras").Action("Clientes", "ListagemGerencial");
-                        ger.Add().Text("Listagem de Preços").Action("Operadoras", "ListagemGerencial");
-
-                    });
                 });
 
+                rela.Add().Text("Gerenciais").Items(ger =>
+                {
+                    ger.Add().Text("Listagem de Compras").Action("Clientes", "ListagemGerencial");
+                    ger.Add().Text("Listagem de Preços").Action("Operadoras", "ListagemGerencial");
+
+                });
+            });
+
                
-            }))
+        })
+        
+    )

@@ -41,7 +41,7 @@ namespace ArteVida.GestorWeb
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                      "~/Content/bootstrap.css",
-                     "~/Content/ArteVida.css"));
+                     "~/Content/kurtlewin.css"));
 
             bundles.IgnoreList.Clear();
         }

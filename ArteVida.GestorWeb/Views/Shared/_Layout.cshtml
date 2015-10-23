@@ -1,70 +1,76 @@
 ﻿<!DOCTYPE html>
 <html>
-@{
-    ViewBag.Title = "Arte & Vida";
-}    
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Arte & Vida:App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - GestorWeb</title>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        @Scripts.Render("~/bundles/jquery")
-        @Styles.Render("~/Content/kendo/css")
-        @Scripts.Render("~/bundles/kendo")
-        @*<link href="~/Content/Artevida.css" rel="stylesheet" />*@
-        <script src="@Url.Content("~/Scripts/kendo/cultures/kendo.culture.pt-BR.min.js")"></script>
-        <script>
-            kendo.culture("pt-BR"); // Alterar Cultura para Português do Brasil
-        </script>
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/kendo")
+
+    @*<script src="~/Scripts/VegaSoft/Gestorweb.js"></script>*@
 
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <script src="~/ReportViewer/js/ReportViewer-8.0.14.225.js"></script>
-        <link href="~/ReportViewer/styles/ReportViewer-8.0.14.225.css" rel="stylesheet" />
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    	<script src="@Url.Content("~/Scripts/kendo/2015.2.624/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/cultures/kendo.culture.pt-BR.min.js")"></script>
+    <script>
+        kendo.culture("pt-BR"); // Alterar Cultura para Português do Brasil
+    </script>
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <script src="~/ReportViewer/js/ReportViewer-8.0.14.225.js"></script>
+    <link href="~/ReportViewer/styles/ReportViewer-8.0.14.225.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
-    <body>
-        <div class="navbar  navbar-fixed-top ">
-            <div class="container">
-                <div class="navbar-header">
+<body>
+    <div class="navbar  navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
 
-                    <img src="~/Images/ArteVida_peq.png" />
-                </div>
+                <img src="~/Images/ArteVida_peq.png" />
+            </div>
 
-                @Html.Partial("_LoginPartial")
-                <div class="nav navbar-nav navbar-right">
-                    <nav>
-                        @Html.Partial("_MenuPrincipal")
-                    </nav>
-                </div>
+            @Html.Partial("_LoginPartial")
+            <div class="nav navbar-nav navbar-right">
+                <nav>
+                    @Html.Partial("_MenuPrincipal")
+                </nav>
             </div>
         </div>
-        <div class="container body-content jumbotron artevida ">
-            @RenderBody()
-        </div>
-        <div class="container footer-content">
+    </div>
+    <div class="container body-content jumbotron">
+        @RenderBody()
+    </div>
+    <div class="container footer-content">
 
-            <footer>
-                <div>
-                    <p class="float-right">                     
-                        &copy; @DateTime.Now.Year - Todos os direitos Reservados - VASIS Sistemas |  (44) 9146-2960 | 9989-1500 |<em>@ViewBag.Versao</em>
-                    </p>
-                </div>
-               
-            </footer>
-        </div>
-        @Scripts.Render("~/bundles/jqueryval")
-        @Scripts.Render("~/bundles/bootstrap")
+        <footer>
 
-        @RenderSection("scripts", required: false)
-    </body>
+            <div>
+                <p class="float-right"> @ViewBag.Versao </p>
+            </div>
+            <div>
+                <p>
+                    &copy; @DateTime.Now.Year - Todos os direitos Reservados - VASIS Sistemas (44) 9989-1500
+                </p>
+            </div>
+        </footer>
+    </div>
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*@Scripts.Render("~/bundles/kendo")*@
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @RenderSection("scripts", required: false)
+
+</body>
 </html>
-
 
 
 
@@ -74,8 +80,8 @@
         height: 550px;
         position: relative;
         display: block;
-        top: 50%;
-        left: 50%;
+        /*top: 50%;
+        left: 50%;*/
         margin-top: 0;
         margin-left: 5px;
     }
@@ -85,11 +91,11 @@
     }
 
     .k-edit-form {
-        width: 750px;
+        width: 980px;
     }
 
     .k-edit-form-container {
-        width: 750px;
+        width: 980px;
         /*height: 300px;*/
     }
 
@@ -103,6 +109,16 @@
     }
 
     .single-line {
+        max-width: none;
+        width: 100%;
+    }
+
+    .k-input {
+        max-width: none;
+        width: 100%;
+    }
+
+    .k-textbox {
         max-width: none;
         width: 100%;
     }
@@ -140,6 +156,8 @@
         vertical-align: middle;
         /*line-height: 0.5em;*/
     }
+
+
 
     #reportViewer1 {
         position: absolute;
