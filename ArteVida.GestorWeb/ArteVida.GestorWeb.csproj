@@ -766,6 +766,7 @@
     <Content Include="Scripts\kendo\2015.2.624\kendo.web.min.js" />
     <Content Include="Scripts\kendo\2015.2.624\kendo.window.min.js" />
     <Content Include="Scripts\kendo\2015.2.624\pako_deflate.min.js" />
+    <Content Include="Scripts\kendo\2015.2.624\Cultures\kendo.culture.pt-BR.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
