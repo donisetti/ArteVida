@@ -28,6 +28,15 @@
     <script src="~/ReportViewer/js/ReportViewer-8.0.14.225.js"></script>
     <link href="~/ReportViewer/styles/ReportViewer-8.0.14.225.css" rel="stylesheet" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.common-bootstrap.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.dataviz.bootstrap.min.css")" rel="stylesheet" type="text/css" />
+	<script src="@Url.Content("~/Scripts/kendo/2015.2.624/jquery.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2015.2.624/jszip.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2015.2.624/kendo.all.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2015.2.624/kendo.aspnetmvc.min.js")"></script>
 </head>
 <body>
     <div class="navbar  navbar-fixed-top ">
@@ -45,9 +54,12 @@
             </div>
         </div>
     </div>
-    <div class="container body-content jumbotron">
+<div class="container body-content jumbotron">
+  
         @RenderBody()
-    </div>
+   
+   
+</div>
     <div class="container footer-content">
 
         <footer>

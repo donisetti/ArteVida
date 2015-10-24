@@ -63,7 +63,9 @@
 nav  {
     display: block;
     font-size: 12px; /*Tamanho da fonte do menu*/
-    padding-top: 1px; /*deslocamento da barra de menu*/
+    padding-top: 3px; /*deslocamento da barra de menu*/
+    
+    margin-top: 10px; /*Margem direita da barra de menu*/
     margin-right: 1px; /*Margem direita da barra de menu*/
     
 }
@@ -82,7 +84,7 @@ footer {
 .body-content {
     margin-top: 60px; /*Margem do Body Principal*/
     margin-bottom: 1px; /*Margem do Body Principal*/
-    
+    height: 500px; /*Altura do  Body Principal*/
 }
 
 .footer-content {   

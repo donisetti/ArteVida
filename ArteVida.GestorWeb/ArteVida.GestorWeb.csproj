@@ -559,6 +559,7 @@
     <Content Include="Content\kendo\2015.2.624\Uniform\sprite_2x.png" />
     <Content Include="Content\kendo\2015.2.624\Uniform\sprite_kpi.png" />
     <Content Include="Content\kendo\2015.2.624\Uniform\sprite_kpi_2x.png" />
+    <Content Include="Content\site.css" />
     <Content Include="Content\Kurtlewin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1004,6 +1005,7 @@
     <Folder Include="Dados\" />
     <Folder Include="docs\" />
     <Folder Include="Imagem\" />
+    <Folder Include="Scripts\ArteVida\" />
     <Folder Include="Views\Cadastro\" />
     <Folder Include="Views\Irmao\" />
   </ItemGroup>
@@ -1046,6 +1048,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties UseCdnSupport="False" />
     </VisualStudio>
   </ProjectExtensions>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
