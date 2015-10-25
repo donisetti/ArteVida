@@ -1,47 +1,49 @@
 ﻿@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
 
-<div class="container telaCadastro well">
+<div class="container  well">
     
     @Html.HiddenFor(model => model.PessoaId, new {id = "AtletaID"})
 
+
+
     <div class="row">
 
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Nome)
         </div>
 
-        <div class="col-sm-7">
+        <div class="col-md-7">
             @Html.EditorFor(model => model.Nome)
             @Html.ValidationMessageFor(model => model.Nome)
 
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.NumeroFicha)
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.EditorFor(model => model.NumeroFicha)
             @Html.ValidationMessageFor(model => model.NumeroFicha)
 
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Endereco)
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-md-6">
             @Html.EditorFor(model => model.Endereco)
             @Html.ValidationMessageFor(model => model.Endereco)
 
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Telefone)
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.EditorFor(model => model.Telefone)
             @Html.ValidationMessageFor(model => model.Telefone)
 
@@ -49,35 +51,33 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Rg)
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.EditorFor(model => model.Rg)
             @Html.ValidationMessageFor(model => model.Rg)
 
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Cpf)
 
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.EditorFor(model => model.Cpf)
             @Html.ValidationMessageFor(model => model.Cpf)
 
         </div>
 
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Sexo)
-
         </div>
 
-
-
-        <div class="col-sm-2">
+        <div class="col-md-2">
+          
             @(Html.Kendo().ComboBox()
                   .Name("Sexo")
                   .Placeholder("Sexo...")
@@ -89,27 +89,27 @@
 
                   .SelectedIndex(1)
                   .Suggest(true)
-                  .HtmlAttributes(new {style = "width:150px"}))
+                 )
             @Html.ValidationMessageFor(model => model.Sexo)
         </div>
 
     </div>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Escola)
         </div>
 
-        <div class="col-sm-5">
+        <div class="col-md-5">
             @Html.EditorFor(model => model.Escola)
             @Html.ValidationMessageFor(model => model.Escola)
 
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.LabelFor(model => model.Serie)
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.EditorFor(model => model.Serie)
             @Html.ValidationMessageFor(model => model.Serie)
 
@@ -118,21 +118,21 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Pai)
         </div>
 
-        <div class="col-sm-5">
+        <div class="col-md-5">
             @Html.EditorFor(model => model.Pai)
             @Html.ValidationMessageFor(model => model.Pai)
 
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.LabelFor(model => model.TelefonePai)
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.EditorFor(model => model.TelefonePai)
             @Html.ValidationMessageFor(model => model.TelefonePai)
 
@@ -141,21 +141,21 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Mae)
         </div>
 
-        <div class="col-sm-5">
+        <div class="col-md-5">
             @Html.EditorFor(model => model.Mae)
             @Html.ValidationMessageFor(model => model.Mae)
 
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.LabelFor(model => model.TelefoneMae)
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-2">
             @Html.EditorFor(model => model.TelefoneMae)
             @Html.ValidationMessageFor(model => model.TelefoneMae)
 
@@ -164,21 +164,21 @@
 
     </div>
     <div class="row">
-        <div class="col-sm-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.Modalidade)
         </div>
 
-        <div class="col-sm-5">
+        <div class="col-md-5">
             @Html.EditorFor(model => model.Modalidade)
             @Html.ValidationMessageFor(model => model.Modalidade)
 
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.DataCadastro)
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-md-1">
             @Html.EditorFor(model => model.DataCadastro)
             @Html.ValidationMessageFor(model => model.DataCadastro)
 

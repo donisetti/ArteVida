@@ -1,27 +1,22 @@
-﻿@using ArteVida.GestorWeb.ViewModels
-@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
+﻿@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
 
-@Html.HiddenFor(model => model.PessoaId, new { id = "ID" })
-
-
-<div id="campos" class="col-sm-11"  style="width:830px;padding:5px; ">
-    <div id="telatab">
-        @(Html.Kendo().TabStrip()
+<div class="col-md-11">
+    @(Html.Kendo().TabStrip()
             .Name("tabstrip")
             .Events(events => events.Select("AtualizaGridIrmaos"))
             .Items(tabstrip =>
             {
-              tabstrip.Add().Text("Atleta")
-                  .Selected(true)
-                  .Content(@Html.Partial("_DadosAtleta").ToHtmlString());
-                
-              tabstrip.Add().Text(" Irmãos")
-                  .Selected(false)
-                  .Content(@Html.Partial("_DadosIrmoes").ToHtmlString());
-                  
-          })
-        )
-    </div>
+                tabstrip.Add().Text("Atleta")
+                    .Selected(true)
+                    .Content(@Html.Partial("_DadosAtleta").ToHtmlString());
+
+                tabstrip.Add().Text(" Irmãos")
+                    .Selected(false)
+                    .Content(@Html.Partial("_DadosIrmoes").ToHtmlString());
+
+            })
+    )
+
 </div>
 
 
