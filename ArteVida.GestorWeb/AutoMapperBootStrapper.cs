@@ -16,7 +16,9 @@ namespace ArteVida.GestorWeb
             Mapper.CreateMap<Pessoa, PessoaViewModel>();
 
             Mapper.CreateMap<AtletaViewModel, Atleta>();
-            Mapper.CreateMap<Atleta, AtletaViewModel>();
+            Mapper.CreateMap<Atleta, AtletaViewModel>()
+                .ForMember(d => d.TelefonePais, o => o.MapFrom(p => p.TelefonePai + " - " + p.TelefoneMae))
+                 .ForMember(d => d.NomePais, o => o.MapFrom(p =>  p.Pai +",  "+ p.Mae));
 
             Mapper.CreateMap<IrmaoViewModel, Irmao>();
             Mapper.CreateMap<Irmao, IrmaoViewModel>();

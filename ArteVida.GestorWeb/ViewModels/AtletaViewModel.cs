@@ -40,5 +40,8 @@ namespace ArteVida.GestorWeb.ViewModels
         public string TelefoneMae { get; set; }
 
         public string Modalidade { get; set; }
+
+        public string NomePais { get; set; }
+        public string TelefonePais { get; set; }
     }
 }

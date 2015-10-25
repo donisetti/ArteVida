@@ -2,6 +2,10 @@
 @(Html.Kendo().Grid<AtletaViewModel>()
     .Name("GridAtleta")
     .ToolBar(tb => tb.Create())
+     .Events(
+                e => e.Edit("onEditaAtleta")
+                    .Save("onGravaAtleta")) // apenas teste, não foi usado
+
     .Pageable(pg => pg
         .Refresh(true)
             .PageSizes(new int[] { 10, 50, 100, 250 })
@@ -10,19 +14,21 @@
     .Sortable()
     .Filterable()
     .Editable(ed =>
-        {
-            ed.Mode(GridEditMode.PopUp).TemplateName("TelaAtleta");
-            ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
-            ed.Window(w => w.Title("Cadastro de Atletas"));
+    {
+        ed.Mode(GridEditMode.PopUp).TemplateName("TelaAtleta");
+        ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
+        ed.Window(w => w.Title("Cadastro de Atletas"));
 
-        }
+    }
           )
-    .Scrollable(scr => scr.Height(360))
-      
-    .DataSource(dataSource => dataSource.Ajax()        
+    .Scrollable(scr => scr.Height(390))
+
+    .DataSource(dataSource => dataSource.Ajax()
     .Model(model => model.Id(c => c.PessoaId))
+            .Events(ev => ev.RequestEnd("onRequestEndAtleta").Error("onError"))
             .Read("Ler", "Atleta")
-            .Create("Incluir", "Atleta")
+            // .Create("Incluir", "Atleta")
+            .Create(create => create.Action("Incluir", "Atleta").Data("PegaAtletaID"))
             .Update("Atualizar", "Atleta")
             .Destroy("Excluir", "Atleta"))
 
@@ -30,22 +36,15 @@
     {
         cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })
             ).Width(20);
-        cols.Bound(c => c.NumeroFicha).Width(70).Title("Ficha Nº");
+        //cols.Bound(c => c.NumeroFicha).Width(70).Title("Ficha Nº");
         cols.Bound(c => c.Nome).Width(170).Title("Atleta");
-   
-   
-        cols.Bound(c => c.Pai).Width(150).Title("Pai");
-        cols.Bound(c => c.TelefonePai).Width(70).Title("Telefone");
-
-        cols.Bound(c => c.Mae).Width(150).Title("Mãe");
-
-        cols.Bound(c => c.TelefoneMae).Width(70).Title("Telefone");
-      
+        cols.Bound(c => c.NomePais).Width(150).Title("Nome dos Pais");
+        cols.Bound(c => c.TelefonePais).Width(100).Title("Tel. Pai/Mãe");    
         cols.Bound(c => c.Modalidade).Width(70).Title("Modalidade");
         cols.Bound(c => c.Sexo).Width(60).Title("Sexo");
 
 
-       
+
 
         cols.Command(cmd => cmd.Destroy().Text(" ").HtmlAttributes(new { title = "Excluir" })).Width(20);
 

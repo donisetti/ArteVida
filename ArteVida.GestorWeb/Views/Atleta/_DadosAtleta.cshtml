@@ -1,8 +1,8 @@
-﻿@model ArteVida.GestorWeb.ViewModels.PessoaViewModel
+﻿@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
 
-@Html.HiddenFor(model => model.PessoaId)
-
-<div id="campos" style="width:550px;height:250px;padding:2px; ">
+<div class="container telaCadastro well">
+    
+    @Html.HiddenFor(model => model.PessoaId, new {id = "AtletaID"})
 
     <div class="row">
 
@@ -15,7 +15,7 @@
             @Html.ValidationMessageFor(model => model.Nome)
 
         </div>
-        
+
         <div class="col-sm-1">
             @Html.LabelFor(model => model.NumeroFicha)
         </div>
@@ -35,8 +35,8 @@
             @Html.EditorFor(model => model.Endereco)
             @Html.ValidationMessageFor(model => model.Endereco)
 
-        </div>  
-        
+        </div>
+
         <div class="col-sm-1">
             @Html.LabelFor(model => model.Telefone)
         </div>
@@ -45,93 +45,55 @@
             @Html.EditorFor(model => model.Telefone)
             @Html.ValidationMessageFor(model => model.Telefone)
 
-        </div>  
+        </div>
 
     </div>
+    <div class="row">
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Rg)
+        </div>
 
-        <div class="row">
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Rg)
+            @Html.ValidationMessageFor(model => model.Rg)
 
-         
+        </div>
 
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Bairro)
-            </div>
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Cpf)
 
-            <div class="col-sm-2">
-                @Html.EditorFor(model => model.Bairro)
-                @Html.ValidationMessageFor(model => model.Bairro)
+        </div>
 
-            </div>
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.Cpf)
+            @Html.ValidationMessageFor(model => model.Cpf)
 
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Cidade)
-            </div>
+        </div>
 
-            <div class="col-sm-2">
-                @Html.EditorFor(model => model.Cidade)
-                @Html.ValidationMessageFor(model => model.Cidade)
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Sexo)
 
-            </div>
-
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Estado)
-            </div>
-
-            <div class="col-sm-2">
-                @Html.EditorFor(model => model.Estado)
-                @Html.ValidationMessageFor(model => model.Estado)
-
-            </div>
         </div>
 
 
 
+        <div class="col-sm-2">
+            @(Html.Kendo().ComboBox()
+                  .Name("Sexo")
+                  .Placeholder("Sexo...")
+                  .BindTo(new List<string>()
+                  {
+                      "Masculino",
+                      "Feminino"
+                  })
 
-        <div class="row">
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Rg)
-            </div>
-
-            <div class="col-sm-2">
-                @Html.EditorFor(model => model.Rg)
-                @Html.ValidationMessageFor(model => model.Rg)
-
-            </div>
-
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Cpf)
-
-            </div>
-
-            <div class="col-sm-2">
-                @Html.EditorFor(model => model.Cpf)
-                @Html.ValidationMessageFor(model => model.Cpf)
-
-            </div>
-            
-            <div class="col-sm-1">
-                @Html.LabelFor(model => model.Sexo)
-
-            </div>
-
-
-
-            <div class="col-sm-2">
-                @(Html.Kendo().ComboBox()
-                .Name("Sexo")
-                .Placeholder("Sexo...")
-                .BindTo(new List<string>() {
-                    "Masculino",
-                    "Feminino"
-                })
-                .SelectedIndex(1)
-                .Suggest(true)
-                .HtmlAttributes(new { style = "width:150px" }))
-                @Html.ValidationMessageFor(model => model.Sexo)
-            </div>
-
+                  .SelectedIndex(1)
+                  .Suggest(true)
+                  .HtmlAttributes(new {style = "width:150px"}))
+            @Html.ValidationMessageFor(model => model.Sexo)
         </div>
 
+    </div>
     <div class="row">
         <div class="col-sm-1">
             @Html.LabelFor(model => model.Escola)
@@ -155,7 +117,6 @@
 
 
     </div>
-
     <div class="row">
         <div class="col-sm-1">
             @Html.LabelFor(model => model.Pai)
@@ -179,7 +140,6 @@
 
 
     </div>
-
     <div class="row">
         <div class="col-sm-1">
             @Html.LabelFor(model => model.Mae)
@@ -203,30 +163,28 @@
 
 
     </div>
-    
     <div class="row">
-        <div class="col-sm-2">
-            @Html.LabelFor(model => model.DataNascimento)
+        <div class="col-sm-1">
+            @Html.LabelFor(model => model.Modalidade)
         </div>
 
-        <div class="col-sm-4">
-            @Html.EditorFor(model => model.DataNascimento)
-            @Html.ValidationMessageFor(model => model.DataNascimento)
+        <div class="col-sm-5">
+            @Html.EditorFor(model => model.Modalidade)
+            @Html.ValidationMessageFor(model => model.Modalidade)
 
-        </div>
-
-        <div class="col-sm-2">
-            @Html.LabelFor(model => model.Idade)
         </div>
 
         <div class="col-sm-2">
-            @Html.EditorFor(model => model.Idade)
-            @Html.ValidationMessageFor(model => model.Idade)
+            @Html.LabelFor(model => model.DataCadastro)
+        </div>
+
+        <div class="col-sm-2">
+            @Html.EditorFor(model => model.DataCadastro)
+            @Html.ValidationMessageFor(model => model.DataCadastro)
 
         </div>
+
 
     </div>
 
-
 </div>
-

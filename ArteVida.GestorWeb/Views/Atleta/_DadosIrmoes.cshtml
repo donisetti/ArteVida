@@ -1,0 +1,59 @@
+﻿@using ArteVida.GestorWeb.ViewModels
+@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
+
+@(Html.Kendo().Grid<IrmaoViewModel>()
+    .Name("GridIrmaos")
+    .ToolBar(tb => tb.Create())
+    .Pageable(pg => pg
+        .Refresh(true)
+        .PageSizes(true)
+        .ButtonCount(20)
+        )
+    .Sortable()
+    .Filterable().AutoBind(false) // Bug caso true
+
+    .Editable(ed =>
+    {
+        ed.Mode(GridEditMode.PopUp).TemplateName("TelaIrmao");
+        ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
+        ed.Window(w => w.Title("Cadastro de Irmão"));
+
+    }
+          )
+    .Scrollable(scr => scr.Height(360))
+    .DataSource(dataSource => dataSource.Ajax()
+    .Model(model => model.Id(c => c.IrmaoId))
+                                  // .Read("Ler", "Irmao", new {id= @Model.PessoaId})
+                                  //.Create("Incluir", "Irmao")
+                                  //   .Read(read => read.Action("Ler", "Irmao").Data("PegaID"))
+                                  .Read(read => read.Action("Ler", "Irmao").Data("PegaID"))
+                            .Create(create => create.Action("Incluir", "Irmao").Data("PegaID"))
+                        .Update("Atualizar", "Irmao")
+                    .Destroy("Excluir", "Irmao")
+
+                )
+
+    .Columns(cols =>
+    {
+        cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })).Width(20);
+
+
+        cols.Bound(c => c.Nome).Width(170).Title("Nome");
+        cols.Bound(c => c.Idade).Width(100).Title("Idade");
+
+
+        cols.Command(cmd => cmd.Destroy().Text(" ").HtmlAttributes(new { title = "Excluir" })).Width(20);
+
+
+    })
+)
+
+
+
+
+
+
+
+
+
+
