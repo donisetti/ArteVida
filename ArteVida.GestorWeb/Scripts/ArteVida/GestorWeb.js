@@ -1,10 +1,12 @@
 ﻿function PegaID() {
-    return { id: $("#ID").val() };
+    var i = $("#AtletaID").val();
+    //alert("PegaTitularID -> " + i);
+    return { atletaId: i };
 }
 
 function PegaAtletaID() {
     var i = $("#AtletaID").val();
-    alert("PegaTitularID" + i);
+    //alert("PegaTitularID -> " + i);
     return { atletaId: i };
 } // PegaAtletaID
 
@@ -12,6 +14,38 @@ function AtualizaGridIrmaos() {
     $("#GridIrmaos").data('kendoGrid').dataSource.read();
     $("#GridIrmaos").data('kendoGrid').refresh();
 }
+
+
+  function AtualizaGridAtletaIrmaos(e) {
+        
+       
+        var nomeAtleta = $("#Nome").val();
+       
+
+        if (nomeAtleta != "") {
+            var atletaId = $("#AtletaID").val();
+          
+            if (atletaId == 0)
+                IncluirAtleta(e);
+
+            $("#GridTitularIrmaos").data('kendoGrid').dataSource.read();
+            $("#GridTitularIrmaos").data('kendoGrid').refresh();
+
+
+
+        } else {
+            if (e.item.innerText == "Irmãos") {
+               
+                alert("Deve informar o Nome Atleta.");  
+            }
+          
+        }
+
+
+       
+
+    }       //AtualizaGridAtletaIrmaos
+
 
 
 function FechadoTelaAtleta(e) {
@@ -56,7 +90,7 @@ function onEditaAtleta() {
 function onGravaAtleta() {
    // alert("Teste: Gravar Atleta");
 
-    this.read();
+  //  this.read();
 } //onGravaAtleta
 
 
@@ -66,10 +100,10 @@ function onRequestEndAtleta(e) {
 
         //   var id = 10;
 
-        $("#GridAtleta").data("kendoGrid").dataSource.read();
-        $("#GridAtleta").data("kendoGrid").dataSource.refresh();
+        //$("#GridAtleta").data("kendoGrid").dataSource.read();
+        //$("#GridAtleta").data("kendoGrid").dataSource.refresh();
 
-
+        alert("Refrech: GridAtleta");
     }
 
 } //onRequestEndAtleta

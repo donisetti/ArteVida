@@ -12,15 +12,22 @@ namespace ArteVida.GestorWeb.ViewModels
           [Display(Name = "Ficha nº")]
         public string NumeroFicha { get; set; }
           [Display(Name = "Nome")]
+        [Required(ErrorMessage = "O campo NOME deve ser preenchido.")]
         public string Nome { get; set; }
           [Display(Name = "Endereço")]
         public string Endereco { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-          [Display(Name = "Data Cadastro")]
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Data Cadastro")]
         public DateTime? DataCadastro { get; set; }
-          [Display(Name = "Data Nascimento")]
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Data Nascimento")]
         public DateTime? DataNascimento { get; set; }
         public string Rg { get; set; }
         //[StringLength(11)]

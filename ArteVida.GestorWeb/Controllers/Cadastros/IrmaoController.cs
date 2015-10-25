@@ -11,6 +11,7 @@ using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 
 using ArteVida.GestorWeb.ViewModels;
+using Microsoft.Owin.Security.DataHandler.Encoder;
 
 namespace ArteVida.GestorWeb.Controllers
 {
@@ -45,15 +46,12 @@ namespace ArteVida.GestorWeb.Controllers
             return View("_ConsultaBase", model);
         }
 
-        //public ActionResult Ler([DataSourceRequest] DataSourceRequest request)
-        //{
-        //    _AtletaId = 1;
-        //    //_AtletaId = int.Parse(id);
-
-
-        //    return Json(PegarIrmaos().ToDataSourceResult(request));
-        //}
-
+        public ActionResult LerIrmaoAtleta([DataSourceRequest] DataSourceRequest request, int atletaId)
+        {
+            _AtletaId = atletaId;
+            return Json(PegarIrmaos().ToDataSourceResult(request));
+        }
+        
         public ActionResult Ler([DataSourceRequest] DataSourceRequest request, int id)
         {
             _AtletaId = id;
@@ -78,13 +76,16 @@ namespace ArteVida.GestorWeb.Controllers
 
 
 
-        public ActionResult Incluir([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
+        public ActionResult IncluirIrmaoAtleta([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
         {
+            return IncluirIrmaoAtleta(request, item,0);
+        }
 
-
+        [HttpPost]
+        private ActionResult IncluirIrmaoAtleta(DataSourceRequest request, IrmaoViewModel item, int atletaId )
+        {
             if (ModelState.IsValid)
             {
-
                 try
                 {
                     Irmao dados = Mapper.Map<Irmao>(item);
@@ -93,23 +94,14 @@ namespace ArteVida.GestorWeb.Controllers
                     item.IrmaoId = dados.IrmaoId;
                 }
                 catch (Exception erro)
-                {
-
-                    if (erro.InnerException.InnerException.Message.Contains("IdxNome"))
-                    {
-                        ModelState.AddModelError("", "O nome já foi incluído.");
-                    }
-
+                {                   
+                    ModelState.AddModelError("", erro.Message);
                     _contexto.Rollback();
                     return Json(ModelState.ToDataSourceResult());
-
                 }
-
-
-
             }
 
-            return Json(new[] { item }.ToDataSourceResult(request));
+            return Json(new[] {item}.ToDataSourceResult(request));
         }
 
 

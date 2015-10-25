@@ -40,7 +40,12 @@ namespace ArteVida.GestorWeb.Controllers
         public ActionResult Consulta()
         {
 
-            var model = new JanelaViewModel { Titulo = "Cadastro de Atletas", Relatorio = "ListagemAtletas.trdx", Tela = "_GridAtletas" };
+            var model = new JanelaViewModel
+            {
+                Titulo = "Cadastro de Atletas",
+                Relatorio = "ListagemAtletas.trdx",
+                Tela = "_GridAtletas"
+            };
             return View("_ConsultaBase", model);
         }
 
@@ -80,36 +85,8 @@ namespace ArteVida.GestorWeb.Controllers
 
         public ActionResult Incluir([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
         {
+            return IncluirAtleta(request, item);
 
-
-            if (ModelState.IsValid)
-            {
-
-                try
-                {
-                    Atleta dados = Mapper.Map<Atleta>(item);
-                    _repositorio.Inserir(dados);
-                    _contexto.SaveChanges();
-                    item.PessoaId = dados.PessoaId;
-                }
-                catch (Exception erro)
-                {
-
-                    if (erro.InnerException.InnerException.Message.Contains("IdxNome"))
-                    {
-                        ModelState.AddModelError("", "O nome já foi incluído.");
-                    }
-
-                    _contexto.Rollback();
-                    return Json(ModelState.ToDataSourceResult());
-
-                }
-
-
-
-            }
-
-            return Json(new[] { item }.ToDataSourceResult(request));
         }
 
 
@@ -120,7 +97,7 @@ namespace ArteVida.GestorWeb.Controllers
             {
                 try
                 {
-                    Atleta dados = Mapper.Map<Atleta>(item);
+                    var dados = MapearViewModel(item);
                     dados = _repositorio.Atualizar(dados);
                     _contexto.Commit();
                     item.PessoaId = dados.PessoaId;
@@ -132,6 +109,11 @@ namespace ArteVida.GestorWeb.Controllers
                     _contexto.Rollback();
 
                 }
+
+            }
+            else
+            {
+                var erros = this.ModelState.Values.SelectMany(m => m.Errors);
 
             }
             return Json(ModelState.ToDataSourceResult());
@@ -157,5 +139,94 @@ namespace ArteVida.GestorWeb.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult InserirAtleta([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
+        {
+            AtletaViewModel itemNovo = new AtletaViewModel();
+
+            // campos obrigatório
+            itemNovo.Nome = item.Nome;
+
+            // demais campos
+
+
+            ContentResult _retorno;
+            try
+            {
+                var novo = IncluirAtleta(request, itemNovo);
+                _retorno = new ContentResult { Content = itemNovo.PessoaId.ToString() };
+            }
+            catch (Exception ex)
+            {
+                _retorno = new ContentResult { Content = "ERRO: " + ex.Message };
+            }
+
+            return _retorno;
+        }
+
+        private ActionResult IncluirAtleta(DataSourceRequest request, AtletaViewModel item)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var dados = MapearViewModel(item);
+
+                    _repositorio.Inserir(dados);
+                    _contexto.SaveChanges();
+                    item.PessoaId = dados.PessoaId;
+
+                }
+                catch (Exception erro)
+                {
+                    ModelState.AddModelError("", erro.Message);
+                    var erros = this.ModelState.Values.SelectMany(m => m.Errors);
+                    _contexto.Rollback();
+                    return Json(ModelState.ToDataSourceResult());
+                }
+            }
+            else
+            {
+                var erros = this.ModelState.Values.SelectMany(m => m.Errors);
+
+            }
+
+            return Json(new[] { item }.ToDataSourceResult(request, ModelState));
+        }
+
+        private Atleta MapearViewModel(AtletaViewModel item)
+        {
+            Pessoa p = new Pessoa();
+            Atleta dados = new Atleta();
+
+            if (item.PessoaId > 0)
+            {
+                dados = _contexto.Atletas.Find(item.PessoaId);
+            }
+
+            dados.Nome = item.Nome;
+            dados.DataNascimento = item.DataNascimento;
+
+            dados.Cpf = item.Cpf;
+
+            dados.Pai = item.Pai;
+            dados.Mae = item.Mae;
+
+            dados.Escola = item.Escola;
+
+            dados.Endereco = item.Endereco;
+            dados.Bairro = item.Bairro;
+            dados.Cidade = item.Cidade;
+            dados.Estado = item.Estado;
+
+            dados.Modalidade = item.Modalidade;
+            dados.Telefone = item.Telefone;
+            dados.TelefonePai = item.TelefonePai;
+            dados.TelefoneMae = item.TelefoneMae;
+
+
+
+            return dados;
+        }
     }
 }
