@@ -497,8 +497,10 @@
     <Content Include="Content\kendo\images\kendoui.woff" />
     <None Include="Properties\PublishProfiles\Amazon.pubxml" />
     <None Include="Properties\PublishProfiles\artevida - FTP %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\artevida - FTP %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\artevida - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\artevida - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\artevida - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\artevida - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Borgio.pubxml" />
     <None Include="Properties\PublishProfiles\destakrh - FTP %282%29.pubxml" />
