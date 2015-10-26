@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web.Mvc;
 using ArteVida.Dominio.Contexto;
 using ArteVida.Dominio.Repositorio;
@@ -152,6 +153,16 @@ namespace ArteVida.GestorWeb.Controllers
         {
             try
             {
+                // deve excluir Irmão vinculados
+
+                var irmaos = _contexto.Irmoes.Where(i => i.PessoaId == item.PessoaId);
+
+                foreach (Irmao irmao in irmaos)
+                {
+                    _contexto.Irmoes.Remove(irmao);
+                }
+
+                // Remove Atleta
                 _contexto.Atletas.Remove(_contexto.Atletas.Find(item.PessoaId));
                 _contexto.SaveChanges();
                 ModelState.IsValidField("true");

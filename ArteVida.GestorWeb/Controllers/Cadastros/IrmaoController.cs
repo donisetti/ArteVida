@@ -131,7 +131,7 @@ namespace ArteVida.GestorWeb.Controllers
 
         }
 
-        public ActionResult Excluir([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
+        public ActionResult ExcluirIrmaoAtleta([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
         {
             try
             {
