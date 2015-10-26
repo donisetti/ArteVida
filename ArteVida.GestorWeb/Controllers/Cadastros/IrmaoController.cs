@@ -88,8 +88,8 @@ namespace ArteVida.GestorWeb.Controllers
             {
                 try
                 {
-                    Irmao dados = Mapper.Map<Irmao>(item);
-                    dados.PessoaId = atletaId;
+                    Irmao dados = Mapper.Map<Irmao>(item);                  
+                    dados.Atleta = _contexto.Atletas.Find(atletaId);
                     _repositorio.Inserir(dados);
                     _contexto.SaveChanges();
                     item.IrmaoId = dados.IrmaoId;
@@ -102,7 +102,7 @@ namespace ArteVida.GestorWeb.Controllers
                 }
             }
 
-            return Json(new[] {item}.ToDataSourceResult(request));
+            return Json(new[] {item}.ToDataSourceResult(request, ModelState));
         }
 
 

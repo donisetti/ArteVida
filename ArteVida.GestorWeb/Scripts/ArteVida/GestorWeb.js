@@ -55,7 +55,18 @@ function IncluirAtleta(e) {
                 type: 'POST',
                 data: {
                     Nome: $('#Nome').val(),
-                
+                    Endereco: $('#Endereco').val(),
+                    Telefone: $('#Telefone').val(),
+                    TelefonePai: $('#TelefonePai').val(),
+                    TelefoneMae: $('#TelefoneMae').val(),
+                    Rg: $('#Rg').val(),
+                    Cpf: $('#Cpf').val(),
+                    Escola: $('#Escola').val(),                    
+                    DataCadastro: $('#DataCadastro').val(),
+                    Sexo: $('#Sexo').val(),
+                    DataNascimento: $('#DataNascimento').val(),
+                    Modalidade: $('#Modalidade').val(),
+                    Mae: $('#Mae').val(),
                     Pai: $('#Pai').val()
                 },
                 success: function (Content) {

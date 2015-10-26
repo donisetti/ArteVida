@@ -11,6 +11,7 @@ using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 
 using ArteVida.GestorWeb.ViewModels;
+using Microsoft.Ajax.Utilities;
 
 namespace ArteVida.GestorWeb.Controllers
 {
@@ -20,7 +21,7 @@ namespace ArteVida.GestorWeb.Controllers
         private DbContexto _contexto;
         private RepositorioAtleta _repositorio;
 
-
+        private int _AtletaId;
 
         public AtletaController()
         {
@@ -83,10 +84,37 @@ namespace ArteVida.GestorWeb.Controllers
 
 
 
-        public ActionResult Incluir([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
+        public ActionResult Incluir([DataSourceRequest] DataSourceRequest request, AtletaViewModel item, string atletaId)
         {
-            return IncluirAtleta(request, item);
+            if (atletaId.IsNullOrWhiteSpace())
+                return IncluirAtleta(request, item);
+            else
+            {
+                _AtletaId = int.Parse(atletaId);
 
+                item.PessoaId = _AtletaId;
+                AlterarAtleta(item);
+                return null;
+            }
+            
+        }
+
+        private void AlterarAtleta(AtletaViewModel item)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {                   
+                    var dados = MapearViewModel(item);
+                    dados = _repositorio.Atualizar(dados);
+                    _contexto.Commit();
+                }
+                catch (Exception erro)
+                {
+                    ModelState.AddModelError("", erro.Message);
+                    _contexto.Rollback();
+                }
+            }
         }
 
 
