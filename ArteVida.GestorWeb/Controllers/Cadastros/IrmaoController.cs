@@ -76,19 +76,20 @@ namespace ArteVida.GestorWeb.Controllers
 
 
 
-        public ActionResult IncluirIrmaoAtleta([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
-        {
-            return IncluirIrmaoAtleta(request, item,0);
-        }
+        //public ActionResult IncluirIrmaoAtleta([DataSourceRequest] DataSourceRequest request, IrmaoViewModel item)
+        //{
+        //    return IncluirIrmaoAtleta(request, item,0);
+        //}
 
         [HttpPost]
-        private ActionResult IncluirIrmaoAtleta(DataSourceRequest request, IrmaoViewModel item, int atletaId )
+        public ActionResult IncluirIrmaoAtleta(DataSourceRequest request, IrmaoViewModel item, int atletaId)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     Irmao dados = Mapper.Map<Irmao>(item);
+                    dados.PessoaId = atletaId;
                     _repositorio.Inserir(dados);
                     _contexto.SaveChanges();
                     item.IrmaoId = dados.IrmaoId;

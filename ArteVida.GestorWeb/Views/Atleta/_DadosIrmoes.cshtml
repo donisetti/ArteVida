@@ -20,10 +20,10 @@
     .DataSource(dataSource => dataSource.Ajax()
     .Model(model => model.Id(c => c.IrmaoId))
 
-               .Read(read => read.Action("LerIrmaoAtleta", "Irmao").Data("PegaID"))
-               .Create(create => create.Action("IncluirIrmaoAtleta", "Irmao").Data("PegaID"))
-               .Update(update => update.Action("AtualizarIrmaoAtleta", "Irmao").Data("PegaID"))
-               .Destroy(destroy => destroy.Action("ExcluirIrmaoAtleta", "Irmao").Data("PegaID"))
+               .Read(read => read.Action("LerIrmaoAtleta", "Irmao").Data("PegaAtletaID"))
+               .Create(create => create.Action("IncluirIrmaoAtleta", "Irmao").Data("PegaAtletaID"))
+               .Update(update => update.Action("AtualizarIrmaoAtleta", "Irmao").Data("PegaAtletaID"))
+               .Destroy(destroy => destroy.Action("ExcluirIrmaoAtleta", "Irmao").Data("PegaAtletaID"))
 
             )
 

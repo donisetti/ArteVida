@@ -142,7 +142,9 @@ namespace ArteVida.GestorWeb.Controllers
         [HttpPost]
         public ActionResult InserirAtleta([DataSourceRequest] DataSourceRequest request, AtletaViewModel item)
         {
-            AtletaViewModel itemNovo = new AtletaViewModel();
+            //AtletaViewModel itemNovo = new AtletaViewModel();
+
+            AtletaViewModel itemNovo = Mapper.Map<AtletaViewModel>(item);
 
             // campos obrigatório
             itemNovo.Nome = item.Nome;
