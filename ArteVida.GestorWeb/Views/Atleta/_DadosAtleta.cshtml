@@ -4,27 +4,36 @@
     
     @Html.HiddenFor(model => model.PessoaId, new {id = "AtletaID"})
 
-
-
     <div class="row">
 
         <div class="col-md-1">
             @Html.LabelFor(model => model.Nome)
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-5">
             @Html.EditorFor(model => model.Nome)
             @Html.ValidationMessageFor(model => model.Nome)
 
         </div>
 
-        <div class="col-md-1">
+        @*<div class="col-md-1">
             @Html.LabelFor(model => model.NumeroFicha)
         </div>
 
         <div class="col-md-1">
             @Html.EditorFor(model => model.NumeroFicha)
             @Html.ValidationMessageFor(model => model.NumeroFicha)
+
+        </div>*@
+
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.DataCadastro)
+        </div>
+
+        <div class="col-md-2">          
+            @*@Html.EditorFor(model => model.DataCadastro)*@
+            @Html.Kendo().DatePicker().Name("DataCadastro").Format("dd/MM/yyyy").Culture("pt-BR")
+            @Html.ValidationMessageFor(model => model.DataCadastro)
 
         </div>
     </div>
@@ -179,7 +188,11 @@
         </div>
 
         <div class="col-md-1">
-            @Html.EditorFor(model => model.DataNascimento)
+
+            @*@Html.EditorFor(model => model.DataNascimento)*@
+            @Html.Kendo().DatePickerFor(model => model.DataNascimento).Culture("pt-BR").Format("dd/MM/yyyy")
+            @*@Html.Kendo().DatePicker().Name("DataNascimento").Format("dd/MM/yyyy").Culture("pt-BR")*@
+          
             @Html.ValidationMessageFor(model => model.DataNascimento)
 
         </div>

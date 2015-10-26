@@ -206,6 +206,7 @@ namespace ArteVida.GestorWeb.Controllers
 
             dados.Nome = item.Nome;
             dados.DataNascimento = item.DataNascimento;
+            dados.DataCadastro = item.DataCadastro;
 
             dados.Cpf = item.Cpf;
 
