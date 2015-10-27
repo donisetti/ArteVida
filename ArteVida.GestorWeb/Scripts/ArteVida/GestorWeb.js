@@ -92,8 +92,10 @@ function onEditaAtleta() {
 
 } //onEditaAtleta
 
-function onGravaAtleta() {
-   // alert("Teste: Gravar Atleta");
+function onGravaGrid() {
+     $(".k-edit-form-container .k-grid-update").addClass("k-state-disabled").removeClass("k-grid-update");
+
+    //alert("Teste: Gravar Grid");
 
   //  this.read();
 } //onGravaAtleta

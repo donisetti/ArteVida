@@ -2,9 +2,7 @@
 @(Html.Kendo().Grid<AtletaViewModel>()
     .Name("GridAtleta")
     .ToolBar(tb => tb.Create())
-     .Events(
-                e => e.Edit("onEditaAtleta")
-                    .Save("onGravaAtleta")) // apenas teste, não foi usado
+    .Events(e => e.Save("onGravaGrid"))
 
     .Pageable(pg => pg
         .Refresh(true)
@@ -51,7 +49,6 @@
 
     })
 )
-
 
 
 

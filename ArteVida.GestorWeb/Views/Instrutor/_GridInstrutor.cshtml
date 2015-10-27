@@ -2,6 +2,8 @@
 @(Html.Kendo().Grid<InstrutorViewModel>()
     .Name("GridInstrutor")
     .ToolBar(tb => tb.Create())
+    .Events(e => e.Save("onGravaGrid"))
+
     .Pageable(pg => pg
         .Refresh(true)
             .PageSizes(new int[] { 10, 50, 100, 250 })
@@ -10,12 +12,12 @@
     .Sortable()
     .Filterable()
     .Editable(ed =>
-        {
-            ed.Mode(GridEditMode.PopUp).TemplateName("TelaInstrutor");
-            ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
-            ed.Window(w => w.Title("Cadastro de Instrutor"));
+    {
+        ed.Mode(GridEditMode.PopUp).TemplateName("TelaInstrutor");
+        ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
+        ed.Window(w => w.Title("Cadastro de Instrutor"));
 
-        }
+    }
           )
     .Scrollable(scr => scr.Height(360))
 
@@ -30,11 +32,11 @@
     {
         cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })
             ).Width(20);
-      
+
         cols.Bound(c => c.Nome).Width(170).Title("Instrutor");
         cols.Bound(c => c.Telefone).Width(70).Title("Telefone");
         cols.Bound(c => c.Email).Width(70).Title("Email");
-     
+
 
         cols.Command(cmd => cmd.Destroy().Text(" ").HtmlAttributes(new { title = "Excluir" })).Width(20);
 
