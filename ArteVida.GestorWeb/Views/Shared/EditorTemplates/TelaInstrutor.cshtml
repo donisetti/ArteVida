@@ -1,132 +1,19 @@
-﻿
-@model ArteVida.GestorWeb.ViewModels.InstrutorViewModel
+﻿@model ArteVida.GestorWeb.ViewModels.InstrutorViewModel
 
-@Html.HiddenFor(model => model.PessoaId)
+<div class="col-md-11">
+    @(Html.Kendo().TabStrip()
+            .Name("tabstrip")
+            .Events(events => events.Select("AtualizaGridAtletaIrmaos"))
+            .Items(tabstrip =>
+            {
+                tabstrip.Add().Text("Instrutores")
+                    .Selected(true)
+                    .Content(@Html.Partial("_DadosInstrutores").ToHtmlString());
 
-<div id="campos" class="col-sm-11" style="width:550px;padding:2px; ">
+              
 
-    <div class="row">
-
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Nome)
-        </div>
-
-        <div class="col-sm-10">
-            @Html.EditorFor(model => model.Nome)
-            @Html.ValidationMessageFor(model => model.Nome)
-
-        </div>
-
-
-    </div>
-    <div class="row">
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Endereco)
-        </div>
-
-        <div class="col-sm-5">
-            @Html.EditorFor(model => model.Endereco)
-            @Html.ValidationMessageFor(model => model.Endereco)
-
-        </div>
-
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Telefone)
-        </div>
-
-        <div class="col-sm-3">
-            @Html.EditorFor(model => model.Telefone)
-            @Html.ValidationMessageFor(model => model.Telefone)
-
-        </div>
-
-    </div>
-
-    <div class="row">
-
-
-
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Bairro)
-        </div>
-
-        <div class="col-sm-2">
-            @Html.EditorFor(model => model.Bairro)
-            @Html.ValidationMessageFor(model => model.Bairro)
-
-        </div>
-
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Cidade)
-        </div>
-
-        <div class="col-sm-2">
-            @Html.EditorFor(model => model.Cidade)
-            @Html.ValidationMessageFor(model => model.Cidade)
-
-        </div>
-
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Estado)
-        </div>
-
-        <div class="col-sm-1">
-            @Html.EditorFor(model => model.Estado)
-            @Html.ValidationMessageFor(model => model.Estado)
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Profissao)
-        </div>
-
-        <div class="col-sm-10">
-            @Html.EditorFor(model => model.Profissao)
-            @Html.ValidationMessageFor(model => model.Profissao)
-
-        </div>
-
-    </div>
-
-
-    <div class="row">
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Atividade)
-        </div>
-
-        <div class="col-sm-10">
-            @Html.EditorFor(model => model.Atividade)
-            @Html.ValidationMessageFor(model => model.Atividade)
-
-        </div>
-
-    </div>
-
-
-
-    <div class="row">
-        <div class="col-sm-1">
-            @Html.LabelFor(model => model.Observacao)
-        </div>
-
-        <div class="col-sm-10">
-            @Html.EditorFor(model => model.Observacao)
-            @Html.ValidationMessageFor(model => model.Observacao)
-
-        </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
+            })
+    )
 
 </div>
 

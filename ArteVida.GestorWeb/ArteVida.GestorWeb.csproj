@@ -921,6 +921,7 @@
     <Content Include="Scripts\kendo\kendo.window.min.js.map" />
     <Content Include="Views\Atleta\_DadosAtleta.cshtml" />
     <Content Include="Views\Atleta\_DadosIrmoes.cshtml" />
+    <Content Include="Views\Instrutor\_DadosInstrutores.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
