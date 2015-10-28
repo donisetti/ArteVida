@@ -98,7 +98,7 @@ function onGravaGrid() {
     //alert("Teste: Gravar Grid");
 
   //  this.read();
-} //onGravaAtleta
+} //onGravaGrid
 
 
 function onRequestEndAtleta(e) {
