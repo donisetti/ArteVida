@@ -124,8 +124,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Reporting, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="Telerik.Reporting, Version=9.1.15.624, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>telerik\Telerik.Reporting.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Reporting.Services.WebApi, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -202,10 +203,14 @@
     <Compile Include="AutoMapperBootStrapper.cs" />
     <Compile Include="Controllers\Cadastros\AtletaController.cs" />
     <Compile Include="Controllers\Cadastros\CadastroController.cs" />
+    <Compile Include="Controllers\Cadastros\DiretoriaController.cs" />
     <Compile Include="Controllers\Cadastros\EventoController.cs" />
     <Compile Include="Controllers\Cadastros\InstrutorController.cs" />
     <Compile Include="Controllers\Cadastros\IrmaoController.cs" />
+    <Compile Include="Controllers\Cadastros\PatrocinadorController.cs" />
     <Compile Include="Controllers\Cadastros\PessoaController.cs" />
+    <Compile Include="Controllers\Cadastros\SocioController.cs" />
+    <Compile Include="Controllers\Cadastros\VoluntarioController.cs" />
     <Compile Include="Controllers\ImagemController.cs" />
     <Compile Include="Controllers\ListagemGeralController.cs" />
     <Compile Include="Controllers\Operacional\AccountController.cs" />
@@ -231,9 +236,12 @@
     <Compile Include="ViewModels\ImagemViewModel.cs" />
     <Compile Include="ViewModels\InstrutorViewModel.cs" />
     <Compile Include="ViewModels\IrmaoViewModel.cs" />
+    <Compile Include="ViewModels\PatrocinadorViewModel.cs" />
     <Compile Include="ViewModels\PessoaViewModel.cs" />
+    <Compile Include="ViewModels\SocioViewModel.cs" />
     <Compile Include="ViewModels\TabelaAuxiliarViewModel.cs" />
     <Compile Include="ViewModels\TransporteViewModel.cs" />
+    <Compile Include="ViewModels\VoluntarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Atletas.sql">
@@ -922,6 +930,15 @@
     <Content Include="Views\Atleta\_DadosAtleta.cshtml" />
     <Content Include="Views\Atleta\_DadosIrmoes.cshtml" />
     <Content Include="Views\Instrutor\_DadosInstrutores.cshtml" />
+    <Content Include="Views\Shared\_GridBase.cshtml" />
+    <Content Include="Views\Diretoria\Index.cshtml" />
+    <Content Include="Views\Diretoria\_GridDiretoria.cshtml" />
+    <Content Include="Views\Socio\Index.cshtml" />
+    <Content Include="Views\Patrocinador\Index.cshtml" />
+    <Content Include="Views\Voluntario\Index.cshtml" />
+    <Content Include="Views\Socio\_GridSocios.cshtml" />
+    <Content Include="Views\Voluntario\_GridVoluntarios.cshtml" />
+    <Content Include="Views\Patrocinador\_GridPatrocinadores.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

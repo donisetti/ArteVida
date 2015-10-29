@@ -1,4 +1,9 @@
 ﻿
+function PegaID() {
+    var i = $("#ID").val();
+    return {Id: i };
+}
+
 function PegaAtletaID() {
     var i = $("#AtletaID").val();
     return { atletaId: i };
@@ -99,6 +104,7 @@ function onGravaGrid() {
 
   //  this.read();
 } //onGravaGrid
+
 
 
 function onRequestEndAtleta(e) {

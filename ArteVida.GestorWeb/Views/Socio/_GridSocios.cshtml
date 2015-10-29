@@ -1,0 +1,69 @@
+﻿@using ArteVida.GestorWeb.ViewModels
+@(Html.Kendo().Grid<SocioViewModel>()
+    .Name("GridSocio")
+    .ToolBar(tb => tb.Create())
+    .Events(e => e.Save("onGravaGrid"))
+
+    .Pageable(pg => pg
+        .Refresh(true)
+            .PageSizes(new int[] { 10, 50, 100, 250 })
+        .ButtonCount(20)
+        )
+    .Sortable()
+    .Filterable()
+    .Editable(ed =>
+    {
+        ed.Mode(GridEditMode.PopUp).TemplateName("TelaSocio");
+        ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
+        ed.Window(w => w.Title("Cadastro de Socio"));
+
+    }
+          )
+    .Scrollable(scr => scr.Height(390))
+
+    .DataSource(dataSource => dataSource.Ajax()
+    .Model(model => model.Id(c => c.PessoaId))
+            .Events(ev => ev.RequestEnd("onRequestEndSocio").Error("onError"))
+            .Read("Ler", "Socio")
+            // .Create("Incluir", "Socio")
+            .Create(create => create.Action("Incluir", "Socio").Data("PegaID"))
+            .Update("Atualizar", "Socio")
+            .Destroy("Excluir", "Socio"))
+
+    .Columns(cols =>
+    {
+        cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })).Width(20);
+
+
+        cols.Bound(c => c.Nome).Width(170).Title("Nome");
+
+
+
+
+
+        cols.Command(cmd => cmd.Destroy().Text(" ").HtmlAttributes(new { title = "Excluir" })).Width(20);
+
+
+    })
+)
+
+<script>
+    function onRequestEndSocio(e) {
+
+        if (e.type == "create" || e.type == "update") {
+
+            //   var id = 10;
+
+            $("#GridSocio").data("kendoGrid").dataSource.read();
+            $("#GridSocio").data("kendoGrid").dataSource.refresh();
+
+             alert("Refrech: Grid Voluntario");
+        }
+
+    } //onRequestEndVoluntario
+
+</script>
+
+
+
+

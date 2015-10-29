@@ -272,4 +272,23 @@ namespace ArteVida.Dominio.Utilitarios
             return _mes[Mes - 1];
         }
     }
+
+    public static class Extensoes
+    {
+        public static string SemAcentos(this string texto)
+        {
+            string retorno = texto.Replace("ó", "o")
+                .Replace("ç", "c").Replace("Ç", "c")
+                 .Replace("ç", "c").Replace("Ç", "c")
+                 .Replace("á", "a").Replace("A", "a")
+                 .Replace("ã", "a").Replace("Ã", "a")
+                 .Replace("õ", "o").Replace("Õ", "O")
+                 .Replace("é", "e").Replace("É", "E")
+                .Replace(" ", "_").Replace("à", "a");
+            return retorno;
+        }
+
+        
+    }
 }
+// á

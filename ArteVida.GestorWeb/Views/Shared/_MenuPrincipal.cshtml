@@ -8,13 +8,13 @@
 
             menu.Add().Text("Cadastro").Items(cad =>
             {
-                cad.Add().Text("Voluntários").Action("Consulta", "Voluntario");
-                cad.Add().Text("Sócios").Action("Consulta", "Socio");
+                cad.Add().Text("Voluntários").Action("Index", "Voluntario");
+                cad.Add().Text("Sócios").Action("Index", "Socio");
                 cad.Add().Text("Atletas").Action("Consulta", "Atleta");
                 cad.Add().Text("Instrutores").Action("Consulta", "Instrutor");
                 cad.Add().Text("Eventos").Action("Consulta", "Evento");
-                cad.Add().Text("Patrocinadores").Action("Consulta", "Patrocinador");
-                cad.Add().Text("Diretoria").Action("Consulta", "Diretoria");
+                cad.Add().Text("Patrocinadores").Action("Index", "Patrocinador");
+                cad.Add().Text("Diretoria").Action("Index", "Diretoria");
 
 
 

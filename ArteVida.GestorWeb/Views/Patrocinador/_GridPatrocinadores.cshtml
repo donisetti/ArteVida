@@ -1,0 +1,68 @@
+﻿@using ArteVida.GestorWeb.ViewModels
+@(Html.Kendo().Grid<PatrocinadorViewModel>()
+    .Name("GridPatrocinador")
+    .ToolBar(tb => tb.Create())
+    .Events(e => e.Save("onGravaGrid"))
+
+    .Pageable(pg => pg
+        .Refresh(true)
+            .PageSizes(new int[] { 10, 50, 100, 250 })
+        .ButtonCount(20)
+        )
+    .Sortable()
+    .Filterable()
+    .Editable(ed =>
+    {
+        ed.Mode(GridEditMode.PopUp).TemplateName("TelaPatrocinador");
+        ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
+        ed.Window(w => w.Title("Cadastro de Patrocinador"));
+
+    }
+          )
+    .Scrollable(scr => scr.Height(390))
+
+    .DataSource(dataSource => dataSource.Ajax()
+    .Model(model => model.Id(c => c.PessoaId))
+            .Events(ev => ev.RequestEnd("onRequestEndPatrocinador").Error("onError"))
+            .Read("Ler", "Patrocinador")
+            // .Create("Incluir", "Patrocinador")
+            .Create(create => create.Action("Incluir", "Patrocinador").Data("PegaID"))
+            .Update("Atualizar", "Patrocinador")
+            .Destroy("Excluir", "Patrocinador"))
+
+    .Columns(cols =>
+    {
+        cols.Command(cmd => cmd.Edit().Text(" ").HtmlAttributes(new { title = "Alterar" })).Width(20);
+
+       
+        cols.Bound(c => c.Nome).Width(170).Title("Nome");
+      
+
+
+
+
+        cols.Command(cmd => cmd.Destroy().Text(" ").HtmlAttributes(new { title = "Excluir" })).Width(20);
+
+
+    })
+)
+
+<script>
+    function onRequestEndPatrocinador(e) {
+
+        if (e.type == "create" || e.type == "update") {
+
+            //   var id = 10;
+
+            $("#GridPatrocinador").data("kendoGrid").dataSource.read();
+            $("#GridPatrocinador").data("kendoGrid").dataSource.refresh();
+
+             alert("Refrech: Grid Voluntario");
+        }
+
+    } //onRequestEndVoluntario
+
+</script>
+
+
+
