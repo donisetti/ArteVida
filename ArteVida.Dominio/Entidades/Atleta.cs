@@ -13,5 +13,10 @@ namespace ArteVida.Dominio.Entidades
             this.Tipo = "Atleta";
         }
         public string Modalidade { get; set; }
+
+        public string Foto { get; set; }
+
+        public List<string> Modalidades { get; set; }
+
     }
 }

@@ -13,6 +13,7 @@ namespace ArteVida.Dominio.Entidades
 
         public string Nome { get; set; }
         public string Cidade { get; set; }
+        public string Local { get; set; }
         public string Modalidade { get; set; }
 
     }

@@ -17,7 +17,7 @@ namespace ArteVida.Dominio.Contexto
             : base("ArteVidaDbContexto")
         {
                     #if DEBUG
-                           //   Database.SetInitializer(new CriarNovoBd());
+                              Database.SetInitializer(new CriarNovoBd());
                     #endif
 
             //Database.SetInitializer(new CriarNovoBd());
@@ -32,6 +32,10 @@ namespace ArteVida.Dominio.Contexto
 
         public DbSet<Irmao> Irmoes { get; set; }
         public DbSet<Instrutor> Instrutores { get; set; }
+        public DbSet<Diretoria> Diretores { get; set; }
+        public DbSet<Voluntario> Voluntarios { get; set; }
+        public DbSet<Socio> Socios { get; set; }
+        
 
         public DbSet<Empresa> Empresas { get; set; }
 

@@ -1,26 +1,23 @@
 ﻿@model ArteVida.GestorWeb.ViewModels.AtletaViewModel
 
 <div class="container  well">
-    
-    @Html.HiddenFor(model => model.PessoaId, new {id = "AtletaID"})
+
+    @Html.HiddenFor(model => model.PessoaId, new { id = "AtletaID" })
 
     <div class="row">
 
         <div class="col-md-1">
             @Html.LabelFor(model => model.Nome)
         </div>
-        @*<script src="@Url.Content("~/Scripts/kendo/cultures/kendo.culture.pt-BR.min.js")"></script>
-        <script>
-        kendo.culture("pt-BR"); // Alterar Cultura para Português do Brasil
-        </script>*@
+      
 
-        <div class="col-md-5">
+        <div class="col-md-6">
             @Html.EditorFor(model => model.Nome)
             @Html.ValidationMessageFor(model => model.Nome)
             @*@Html.EditorFor(model => model.PessoaId)*@
         </div>
 
-        @*<div class="col-md-1">
+        <div class="col-md-1">
             @Html.LabelFor(model => model.NumeroFicha)
         </div>
 
@@ -28,18 +25,9 @@
             @Html.EditorFor(model => model.NumeroFicha)
             @Html.ValidationMessageFor(model => model.NumeroFicha)
 
-        </div>*@
-
-        <div class="col-md-1">
-            @Html.LabelFor(model => model.DataCadastro)
         </div>
 
-        <div class="col-md-2">          
-            @*@Html.EditorFor(model => model.DataCadastro)*@
-            @Html.Kendo().DatePicker().Name("DataCadastro").Format("dd/MM/yyyy").Culture("pt-BR")
-            @Html.ValidationMessageFor(model => model.DataCadastro)
 
-        </div>
     </div>
     <div class="row">
         <div class="col-md-1">
@@ -59,6 +47,28 @@
         <div class="col-md-2">
             @Html.EditorFor(model => model.Telefone)
             @Html.ValidationMessageFor(model => model.Telefone)
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Bairro)
+        </div>
+
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.Bairro)
+            @Html.ValidationMessageFor(model => model.Bairro)
+
+        </div>
+
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Cidade)
+        </div>
+
+        <div class="col-md-2">
+            @Html.EditorFor(model => model.Cidade)
+            @Html.ValidationMessageFor(model => model.Cidade)
 
         </div>
 
@@ -90,7 +100,7 @@
         </div>
 
         <div class="col-md-2">
-          
+
             @(Html.Kendo().ComboBox()
                   .Name("Sexo")
                   .Placeholder("Sexo...")
@@ -102,7 +112,7 @@
 
                   .SelectedIndex(1)
                   .Suggest(true)
-                 )
+            )
             @Html.ValidationMessageFor(model => model.Sexo)
         </div>
 
@@ -196,12 +206,24 @@
             @*@Html.EditorFor(model => model.DataNascimento)*@
             @Html.Kendo().DatePickerFor(model => model.DataNascimento).Culture("pt-BR").Format("dd/MM/yyyy")
             @*@Html.Kendo().DatePicker().Name("DataNascimento").Format("dd/MM/yyyy").Culture("pt-BR")*@
-          
+
             @Html.ValidationMessageFor(model => model.DataNascimento)
 
         </div>
 
 
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.DataCadastro)
+        </div>
+
+        <div class="col-md-2">
+            @*@Html.EditorFor(model => model.DataCadastro)*@
+            @Html.Kendo().DatePicker().Name("DataCadastro").Format("dd/MM/yyyy").Culture("pt-BR")
+            @Html.ValidationMessageFor(model => model.DataCadastro)
+
+        </div>
     </div>
 
 </div>

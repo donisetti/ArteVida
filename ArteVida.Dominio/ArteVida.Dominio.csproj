@@ -49,58 +49,28 @@
     <Compile Include="Contexto\CriarNovoBD.cs" />
     <Compile Include="Contexto\DbContexto.cs" />
     <Compile Include="Entidades\Atleta.cs" />
+    <Compile Include="Entidades\Diretoria.cs" />
     <Compile Include="Entidades\Empresa.cs" />
     <Compile Include="Entidades\Entidade.cs" />
     <Compile Include="Entidades\Evento.cs" />
     <Compile Include="Entidades\Imagem.cs" />
     <Compile Include="Entidades\Instrutor.cs" />
     <Compile Include="Entidades\Irmao.cs" />
+    <Compile Include="Entidades\MonitoramentoEscolar.cs" />
+    <Compile Include="Entidades\PerfilAtleta.cs" />
     <Compile Include="Entidades\Pessoa.cs" />
     <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Entidades\Resultado.cs" />
+    <Compile Include="Entidades\Socio.cs" />
     <Compile Include="Entidades\TabelaAuxiliar.cs" />
-    <Compile Include="Migrations\201504171505230_Initial.cs" />
-    <Compile Include="Migrations\201504171505230_Initial.Designer.cs">
-      <DependentUpon>201504171505230_Initial.cs</DependentUpon>
+    <Compile Include="Entidades\Voluntario.cs" />
+    <Compile Include="Migrations\201510291811169_Revisao12.cs" />
+    <Compile Include="Migrations\201510291811169_Revisao12.Designer.cs">
+      <DependentUpon>201510291811169_Revisao12.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201504171518307_datanula.cs" />
-    <Compile Include="Migrations\201504171518307_datanula.Designer.cs">
-      <DependentUpon>201504171518307_datanula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504181650484_revisao01.cs" />
-    <Compile Include="Migrations\201504181650484_revisao01.Designer.cs">
-      <DependentUpon>201504181650484_revisao01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504181812258_revisao03.cs" />
-    <Compile Include="Migrations\201504181812258_revisao03.Designer.cs">
-      <DependentUpon>201504181812258_revisao03.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504271805085_TabelaEventos.cs" />
-    <Compile Include="Migrations\201504271805085_TabelaEventos.Designer.cs">
-      <DependentUpon>201504271805085_TabelaEventos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504271835059_TabelaEventos2.cs" />
-    <Compile Include="Migrations\201504271835059_TabelaEventos2.Designer.cs">
-      <DependentUpon>201504271835059_TabelaEventos2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504281707593_tabelairmaos.cs" />
-    <Compile Include="Migrations\201504281707593_tabelairmaos.Designer.cs">
-      <DependentUpon>201504281707593_tabelairmaos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504281724454_tabelairmaosrevisao.cs" />
-    <Compile Include="Migrations\201504281724454_tabelairmaosrevisao.Designer.cs">
-      <DependentUpon>201504281724454_tabelairmaosrevisao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505071339355_RevisaoInstrutor.cs" />
-    <Compile Include="Migrations\201505071339355_RevisaoInstrutor.Designer.cs">
-      <DependentUpon>201505071339355_RevisaoInstrutor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505071447532_RevisaoInstrutorPessoa.cs" />
-    <Compile Include="Migrations\201505071447532_RevisaoInstrutorPessoa.Designer.cs">
-      <DependentUpon>201505071447532_RevisaoInstrutorPessoa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201505071456354_RevisaoInstrutorPessoanulos.cs" />
-    <Compile Include="Migrations\201505071456354_RevisaoInstrutorPessoanulos.Designer.cs">
-      <DependentUpon>201505071456354_RevisaoInstrutorPessoanulos.cs</DependentUpon>
+    <Compile Include="Migrations\201510291920057_Revisao12a.cs" />
+    <Compile Include="Migrations\201510291920057_Revisao12a.Designer.cs">
+      <DependentUpon>201510291920057_Revisao12a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,44 +90,16 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504171505230_Initial.resx">
-      <DependentUpon>201504171505230_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504171518307_datanula.resx">
-      <DependentUpon>201504171518307_datanula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504181650484_revisao01.resx">
-      <DependentUpon>201504181650484_revisao01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504181812258_revisao03.resx">
-      <DependentUpon>201504181812258_revisao03.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504271805085_TabelaEventos.resx">
-      <DependentUpon>201504271805085_TabelaEventos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504271835059_TabelaEventos2.resx">
-      <DependentUpon>201504271835059_TabelaEventos2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504281707593_tabelairmaos.resx">
-      <DependentUpon>201504281707593_tabelairmaos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504281724454_tabelairmaosrevisao.resx">
-      <DependentUpon>201504281724454_tabelairmaosrevisao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505071339355_RevisaoInstrutor.resx">
-      <DependentUpon>201505071339355_RevisaoInstrutor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505071447532_RevisaoInstrutorPessoa.resx">
-      <DependentUpon>201505071447532_RevisaoInstrutorPessoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505071456354_RevisaoInstrutorPessoanulos.resx">
-      <DependentUpon>201505071456354_RevisaoInstrutorPessoanulos.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <ItemGroup>
     <Content Include="SQL\Atletas.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510291811169_Revisao12.resx">
+      <DependentUpon>201510291811169_Revisao12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510291920057_Revisao12a.resx">
+      <DependentUpon>201510291920057_Revisao12a.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
