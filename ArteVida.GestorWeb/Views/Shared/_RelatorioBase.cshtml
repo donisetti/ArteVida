@@ -1,0 +1,18 @@
+﻿@model ArteVida.GestorWeb.ViewModels.JanelaViewModel
+
+<div class="telaRelatorio">
+    @{Html.Kendo().Window()
+
+                    .Name("telaConsulta")
+                    .Title(@Model.Titulo)
+
+                    .Content(@<text>
+                        @Html.Partial(@Model.Tela)
+                    </text>)
+
+        .Width(1020)
+        .Height(550)
+        .Modal(true)
+        .Render();
+    }
+</div>

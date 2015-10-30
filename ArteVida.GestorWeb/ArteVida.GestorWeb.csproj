@@ -898,16 +898,7 @@
     <Content Include="Views\TabelaAuxiliar\_GridTipoPlano.cshtml" />
     <Content Include="Views\TabelaAuxiliar\_GridTipoAssociacoes.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TelaTabAuxiliar.cshtml" />
-    <Content Include="Views\ListagemGeral\ListaTabAuxiliar.cshtml" />
-    <Content Include="Views\ListagemGeral\Clientes.cshtml" />
-    <Content Include="Views\ListagemGeral\Operadoras.cshtml" />
-    <Content Include="Views\ListagemGeral\Colaboradores.cshtml" />
-    <Content Include="Views\ListagemGeral\Propostas.cshtml" />
-    <Content Include="Views\ListagemGeral\_ListaTabAuxiliar.cshtml" />
     <Content Include="Views\ListagemGeral\_ListaClientes.cshtml" />
-    <Content Include="Views\ListagemGeral\_ListaColaboradores.cshtml" />
-    <Content Include="Views\ListagemGeral\_ListaOperadoras.cshtml" />
-    <Content Include="Views\ListagemGeral\_ListaPropostas.cshtml" />
     <Content Include="Views\Shared\_ConsultaBase.cshtml" />
     <Content Include="Views\Produto\Consulta.cshtml" />
     <Content Include="Views\Produto\_GridProdutos.cshtml" />
@@ -1072,6 +1063,7 @@
     <Content Include="Scripts\kendo\kendo.angular2.min.js.map" />
     <Content Include="Scripts\kendo\kendo.spreadsheet.min.js.map" />
     <Content Include="Scripts\kendo\kendo.webcomponents.min.js.map" />
+    <Content Include="Views\Shared\_RelatorioBase.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
