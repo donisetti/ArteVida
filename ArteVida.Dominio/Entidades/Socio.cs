@@ -8,6 +8,7 @@ namespace ArteVida.Dominio.Entidades
 {
     public class Socio : Pessoa
     {
-
+         public DateTime? DataAdesao { get; set; }
+         public decimal Mensalidade { get; set; }
     }
 }

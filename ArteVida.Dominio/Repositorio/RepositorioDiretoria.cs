@@ -7,15 +7,11 @@ using ArteVida.Dominio.Entidades;
 
 namespace ArteVida.Dominio.Repositorio
 {
-    public class RepositorioProduto : Repositorio<Produto>
+    public class RepositorioDiretoria : Repositorio<Diretoria>
     {
-        public RepositorioProduto(IUnitOfWork unitOfWork)
-            : base(unitOfWork)
+        public RepositorioDiretoria(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
-
+            
         }
     }
-
-
-
 }

@@ -14,6 +14,8 @@ namespace ArteVida.Dominio.Entidades
         }
         public string Modalidade { get; set; }
 
+        public string Cbat { get; set; }
+
         public string Foto { get; set; }
 
         public List<string> Modalidades { get; set; }
