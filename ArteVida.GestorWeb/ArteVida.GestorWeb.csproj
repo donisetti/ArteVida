@@ -128,14 +128,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>telerik\Telerik.Reporting.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Reporting.Services.WebApi, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="Telerik.Reporting.Services.WebApi, Version=9.1.15.624, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>telerik\Telerik.Reporting.Services.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.Reporting.XpsRendering, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=9.1.15.624, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>telerik\Telerik.Reporting.XpsRendering.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.ReportViewer.Mvc, Version=8.0.14.225, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
-      <Private>True</Private>
+    <Reference Include="Telerik.ReportViewer.Mvc, Version=9.1.15.624, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>telerik\Telerik.ReportViewer.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -212,10 +215,9 @@
     <Compile Include="Controllers\Cadastros\SocioController.cs" />
     <Compile Include="Controllers\Cadastros\VoluntarioController.cs" />
     <Compile Include="Controllers\ImagemController.cs" />
-    <Compile Include="Controllers\ListagemGeralController.cs" />
+    <Compile Include="Controllers\Relatorios\ListagemGeralController.cs" />
     <Compile Include="Controllers\Operacional\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Relatorios\ListaTabAuxiliarController.cs" />
     <Compile Include="Controllers\Operacional\ManageController.cs" />
     <Compile Include="Controllers\Relatorios\ReportsController.cs" />
     <Compile Include="Controllers\Cadastros\TabelaAuxiliarController.cs" />
@@ -635,14 +637,11 @@
     <None Include="Properties\PublishProfiles\destakrh - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\destakrh - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\destakrh - Web Deploy.pubxml" />
-    <Content Include="Relatorios\ListagemBase.trdx" />
     <None Include="Properties\PublishProfiles\Publicacao ArteVida.pubxml" />
     <None Include="Properties\PublishProfiles\WebDeployAmazonEC2.pubxml" />
-    <Content Include="Reports\ListagemClientes.trdx" />
-    <Content Include="Reports\ListagemColaboradores.trdx" />
-    <Content Include="Reports\ListagemOperadoras.trdx" />
-    <Content Include="Reports\ListagemPropostas.trdx" />
-    <Content Include="Reports\ListagemTabelaAuxiliar.trdx" />
+    <Content Include="Reports\ListagemTeste.trdx" />
+    <Content Include="Reports\ListagemAtletas.trdx" />
+    <Content Include="Reports\ListagemInstrutores.trdx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -872,7 +871,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\TelaDespesa.cshtml" />
-    <Content Include="Views\Shared\_Relatorio.cshtml" />
     <Content Include="Views\Shared\_MenuPrincipal.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TelaPessoa.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TelaCadastro.cshtml" />
@@ -888,17 +886,11 @@
     <Content Include="Views\TabelaAuxiliar\_GridCargos.cshtml" />
     <Content Include="Views\TabelaAuxiliar\TipoPlanoSaude.cshtml" />
     <Content Include="Views\TabelaAuxiliar\Associacoes.cshtml" />
-    <Content Include="Views\Reports\ListagemClientes.trdx" />
-    <Content Include="Views\Reports\ListagemColaboradores.trdx" />
-    <Content Include="Views\Reports\ListagemOperadoras.trdx" />
-    <Content Include="Views\Reports\ListagemPropostas.trdx" />
-    <Content Include="Views\Reports\ListagemTabelaAuxiliar.trdx" />
     <Content Include="Views\ListaTabAuxiliar\Index.cshtml" />
     <Content Include="Views\TabelaAuxiliar\_GridAcomodacoes.cshtml" />
     <Content Include="Views\TabelaAuxiliar\_GridTipoPlano.cshtml" />
     <Content Include="Views\TabelaAuxiliar\_GridTipoAssociacoes.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TelaTabAuxiliar.cshtml" />
-    <Content Include="Views\ListagemGeral\_ListaClientes.cshtml" />
     <Content Include="Views\Shared\_ConsultaBase.cshtml" />
     <Content Include="Views\Produto\Consulta.cshtml" />
     <Content Include="Views\Produto\_GridProdutos.cshtml" />
@@ -1064,12 +1056,17 @@
     <Content Include="Scripts\kendo\kendo.spreadsheet.min.js.map" />
     <Content Include="Scripts\kendo\kendo.webcomponents.min.js.map" />
     <Content Include="Views\Shared\_RelatorioBase.cshtml" />
+    <Content Include="Views\Reports\ListagemAtletas.trdx" />
+    <Content Include="Views\ListagemGeral\_ListaClientes.cshtml" />
+    <Content Include="Views\Shared\_Relatorio.cshtml" />
+    <Content Include="Views\ListagemGeral\_ListaGeral.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Dados\" />
     <Folder Include="docs\" />
     <Folder Include="Imagem\" />
+    <Folder Include="Relatorios\" />
     <Folder Include="Views\Cadastro\" />
     <Folder Include="Views\Irmao\" />
   </ItemGroup>
