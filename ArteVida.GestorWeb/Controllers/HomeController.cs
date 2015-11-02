@@ -14,7 +14,7 @@ namespace ArteVida.GestorWeb.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Versao = "Arte e Vida : 1.00.13 - 01/11/2015 18:00 report";
+            ViewBag.Versao = "Arte e Vida : 1.00.13 - 02/11/2015 10:30";
             return View();
         }
 
