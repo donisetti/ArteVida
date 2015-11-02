@@ -5,7 +5,7 @@
 @(Html.TelerikReporting().ReportViewer()
         .Id("reportViewer1")
         .ServiceUrl(Url.Content("~/api/reports/"))
-        .TemplateUrl(Url.Content("~/ReportViewer/templates/telerikReportViewerTemplate-9.2.15.930.html"))
+        .TemplateUrl(Url.Content("~/ReportViewer/templates/telerikReportViewerTemplate.html"))
         // .ReportSource(new TypeReportSource() { TypeName = typeof(ListagemBase).AssemblyQualifiedName })
         .ReportSource(
             new UriReportSource() { Uri = @Model.Relatorio }
