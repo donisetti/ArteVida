@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{054856
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArteVida.Relatorios", "ArteVida.Relatorios\ArteVida.Relatorios.csproj", "{966B0D0B-674A-4C16-94A3-B7140BD893BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{3C685875-24B2-46DC-B6CC-09BD374EEC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C685875-24B2-46DC-B6CC-09BD374EEC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C685875-24B2-46DC-B6CC-09BD374EEC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966B0D0B-674A-4C16-94A3-B7140BD893BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966B0D0B-674A-4C16-94A3-B7140BD893BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966B0D0B-674A-4C16-94A3-B7140BD893BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966B0D0B-674A-4C16-94A3-B7140BD893BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

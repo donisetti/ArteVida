@@ -1,15 +1,17 @@
-﻿@using Telerik.Reporting
-@using Telerik.ReportViewer.Mvc
-
+﻿
+@using ArteVida.Relatorios
 @model ArteVida.GestorWeb.ViewModels.JanelaViewModel
 
 @(Html.TelerikReporting().ReportViewer()
         .Id("reportViewer1")
-        .ServiceUrl("/api/reports/")
-        .TemplateUrl("/ReportViewer/templates/telerikReportViewer.html")
-        .ReportSource(new UriReportSource() { Uri = @Model.Relatorio })
-        .ViewMode(ViewModes.PRINT_PREVIEW)
-        .ScaleMode(ScaleModes.FIT_PAGE_WIDTH)
+        .ServiceUrl(Url.Content("~/api/reports/"))
+        .TemplateUrl(Url.Content("~/ReportViewer/templates/telerikReportViewerTemplate-9.2.15.930.html"))
+        // .ReportSource(new TypeReportSource() { TypeName = typeof(ListagemBase).AssemblyQualifiedName })
+        .ReportSource(
+            new UriReportSource() { Uri = @Model.Relatorio }
+        )
+        .ViewMode(ViewMode.PrintPreview)
+        .ScaleMode(ScaleMode.FitPageWidth)
         .Scale(1.0)
 )
 
