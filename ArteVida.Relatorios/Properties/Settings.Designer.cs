@@ -44,5 +44,16 @@ namespace ArteVida.Relatorios.Properties {
                 return ((string)(this["ArteVidaDbContexto"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:rdba8zsgxp.database.windows.net,1433;Initial Catalog=ArteVidaDB;U" +
+            "ser ID=vegasoft@rdba8zsgxp;Password=Gold@2015")]
+        public string ArteVidaDBAzure {
+            get {
+                return ((string)(this["ArteVidaDBAzure"]));
+            }
+        }
     }
 }
