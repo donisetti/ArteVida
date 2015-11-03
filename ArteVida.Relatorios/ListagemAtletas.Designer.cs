@@ -16,10 +16,10 @@ namespace ArteVida.Relatorios
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.pictureBox1 = new Telerik.Reporting.PictureBox();
             this.Dados = new Telerik.Reporting.DetailSection();
-            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
-            this.DadosAtleta = new Telerik.Reporting.SqlDataSource();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.txtCodigo = new Telerik.Reporting.TextBox();
+            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
+            this.DadosAtleta = new Telerik.Reporting.SqlDataSource();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Cabecalho
@@ -57,17 +57,6 @@ namespace ArteVida.Relatorios
             this.txtCodigo});
             this.Dados.Name = "Dados";
             // 
-            // pageFooterSection1
-            // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(1D);
-            this.pageFooterSection1.Name = "pageFooterSection1";
-            // 
-            // DadosAtleta
-            // 
-            this.DadosAtleta.ConnectionString = "ArteVidaDbContexto";
-            this.DadosAtleta.Name = "DadosAtleta";
-            this.DadosAtleta.SelectCommand = resources.GetString("DadosAtleta.SelectCommand");
-            // 
             // textBox2
             // 
             this.textBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(3.2002005577087402D), Telerik.Reporting.Drawing.Unit.Cm(0D));
@@ -84,6 +73,17 @@ namespace ArteVida.Relatorios
             this.txtCodigo.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.txtCodigo.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             resources.ApplyResources(this.txtCodigo, "txtCodigo");
+            // 
+            // pageFooterSection1
+            // 
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(1D);
+            this.pageFooterSection1.Name = "pageFooterSection1";
+            // 
+            // DadosAtleta
+            // 
+            this.DadosAtleta.ConnectionString = "ArteVida.Relatorios.Properties.Settings.ArteVidaDBAzure";
+            this.DadosAtleta.Name = "DadosAtleta";
+            this.DadosAtleta.SelectCommand = resources.GetString("DadosAtleta.SelectCommand");
             // 
             // ListagemAtletas
             // 
