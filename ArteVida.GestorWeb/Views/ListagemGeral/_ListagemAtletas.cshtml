@@ -1,13 +1,12 @@
 ﻿
 @using ArteVida.Relatorios
-@model ArteVida.GestorWeb.ViewModels.JanelaViewModel
 
 @(Html.TelerikReporting().ReportViewer()
         .Id("reportViewer1")
         .ServiceUrl(Url.Content("~/api/reports/"))
         .TemplateUrl(Url.Content("~/ReportViewer/templates/telerikReportViewerPtBRTemplate.html"))
-        .ReportSource(new TypeReportSource() { TypeName = typeof(ListagemBase).AssemblyQualifiedName })
-        //.ReportSource(new UriReportSource() { Uri = @Model.Relatorio })
+        .ReportSource(new TypeReportSource() { TypeName = typeof(ListagemAtletas).AssemblyQualifiedName })
+        //.ReportSource(new UriReportSource() { Uri = @Model.Relatorio })     
         .ViewMode(ViewMode.PrintPreview)
         .ScaleMode(ScaleMode.FitPageWidth)
         .Scale(1.0)

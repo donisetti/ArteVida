@@ -12,7 +12,7 @@ namespace ArteVida.GestorWeb.Controllers
         // GET: ListagemGeral
         public ActionResult Atletas()
         {
-            var model = new JanelaViewModel { Titulo = "Listagem de Atletas", Relatorio = "ListagemAtletas.trdx", Tela = "_ListaGeral" };
+            var model = new JanelaViewModel { Titulo = "Listagem de Atletas", Relatorio = "ListagemAtletas.trdx", Tela = "_ListagemAtletas" };
             return View("_RelatorioBase", model);
         }
 

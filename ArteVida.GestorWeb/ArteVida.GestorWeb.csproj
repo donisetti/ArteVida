@@ -625,7 +625,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ReportViewer\templates\telerikReportViewerTemplate-9.2.15.930.html" />
-    <Content Include="ReportViewer\templates\telerikReportViewerTemplate.html" />
+    <Content Include="ReportViewer\templates\telerikReportViewerPtBRTemplate.html" />
     <Content Include="Scripts\ArteVida\GestorWeb.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1093,9 +1093,9 @@
     <Content Include="Scripts\kendo\kendo.webcomponents.min.js.map" />
     <Content Include="Views\Shared\_RelatorioBase.cshtml" />
     <Content Include="Views\Reports\ListagemAtletas.trdx" />
-    <Content Include="Views\ListagemGeral\_ListaClientes.cshtml" />
     <Content Include="Views\Shared\_Relatorio.cshtml" />
     <Content Include="Views\ListagemGeral\_ListaGeral.cshtml" />
+    <Content Include="Views\ListagemGeral\_ListagemAtletas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

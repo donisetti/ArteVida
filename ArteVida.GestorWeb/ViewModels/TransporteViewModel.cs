@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using ArteVida.Dominio.Utilitarios;
+using ArteVida.Relatorios;
+
 
 namespace ArteVida.GestorWeb.ViewModels
 {
@@ -13,6 +15,7 @@ namespace ArteVida.GestorWeb.ViewModels
             Titulo = "Cadastro de (...Em construção)";
             Tela = "_GridBase";
             Relatorio = "RelatorioBase.trdx";
+          
         }
         public JanelaViewModel(string titulo)
         {
@@ -20,8 +23,12 @@ namespace ArteVida.GestorWeb.ViewModels
             Tela = $"_Grid{titulo.SemAcentos()}";
             Relatorio = $"Relatorio{titulo.SemAcentos()}.trdx"; ;
         }
+
+      
+
         public string Titulo { get; set; }
         public string Relatorio { get; set; }
         public string Tela { get; set; }
+       
     }
 }
