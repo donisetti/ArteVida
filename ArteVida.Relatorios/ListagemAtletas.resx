@@ -371,11 +371,23 @@
         z0cvhQ9qLXiFNfiywSuswSeJD2YteIU1+JKBWv8HOaWo3RRsSosAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="textBox5.Value" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="textBox4.Value" xml:space="preserve">
+    <value>Escola</value>
+  </data>
+  <data name="textBox6.Value" xml:space="preserve">
+    <value>Nome</value>
+  </data>
   <data name="textBox2.Value" xml:space="preserve">
     <value>= Fields.Nome</value>
   </data>
   <data name="txtCodigo.Value" xml:space="preserve">
     <value>= Fields.PessoaId</value>
+  </data>
+  <data name="textBox3.Value" xml:space="preserve">
+    <value>= Fields.Escola</value>
   </data>
   <data name="DadosAtleta.SelectCommand" xml:space="preserve">
     <value>SELECT        Pessoas.PessoaId, Pessoas.Motivacao, Pessoas.DiaSemana, Pessoas.Periodo, Pessoas.Atividade2, Pessoas.Empresa, Pessoas.Mensalidade1, Pessoas.DataAdesao1, Pessoas.Mensalidade, 
@@ -390,6 +402,9 @@ ORDER BY Pessoas.Nome</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>3</value>
   </metadata>
   <metadata name="$this.SnapGridSize" type="Telerik.Reporting.Drawing.Unit, Telerik.Reporting, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
     <value>0.1cm</value>

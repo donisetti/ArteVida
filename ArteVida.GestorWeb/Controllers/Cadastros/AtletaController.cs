@@ -51,7 +51,18 @@ namespace ArteVida.GestorWeb.Controllers
             return View("_ConsultaBase", model);
         }
 
+        //FichaAtleta
 
+        public ActionResult FichaAtleta()
+        {
+            var model = new JanelaViewModel
+            {
+                Titulo = "Ficha Atleta",
+                Relatorio = "ListagemAtletas.trdx",
+                Tela = "_FichaAtletas"
+            };
+            return View("_ConsultaBase", model);
+        }
 
         public ActionResult Ler([DataSourceRequest] DataSourceRequest request)
         {
