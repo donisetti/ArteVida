@@ -7,13 +7,13 @@ namespace ArteVida.Dominio.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class versao1013 : IMigrationMetadata
+    public sealed partial class versao14 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(versao1013));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(versao14));
         
         string IMigrationMetadata.Id
         {
-            get { return "201510301844464_versao1.0.13"; }
+            get { return "201511041526482_versao14"; }
         }
         
         string IMigrationMetadata.Source

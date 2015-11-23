@@ -10,17 +10,18 @@ using ArteVida.Dominio.Repositorio;
 
 namespace ArteVida.Dominio.Contexto
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class DbContexto : DbContext, IUnitOfWork
     {
-
+       
         public DbContexto()
             : base("ArteVidaDbContexto")
         {
                     #if DEBUG
-                              Database.SetInitializer(new CriarNovoBd());
+                             // Database.SetInitializer(new CriarNovoBd());
                     #endif
 
-           // Database.SetInitializer(new CriarNovoBd());
+            //Database.SetInitializer(new CriarNovoBd());
         }
 
 

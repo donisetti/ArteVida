@@ -12,7 +12,7 @@ namespace ArteVida.Dominio.Contexto
     {
         protected override void Seed(DbContexto context)
         {
-            var arqSql = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory,"*.sql");
+            var arqSql = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory,"my*.sql");
              
             foreach (string arq in arqSql)
             {

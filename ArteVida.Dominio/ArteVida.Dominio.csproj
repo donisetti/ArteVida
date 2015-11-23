@@ -56,6 +56,8 @@
     <Compile Include="Configuracao\PessoaConfiguracao.cs" />
     <Compile Include="Contexto\CriarNovoBD.cs" />
     <Compile Include="Contexto\DbContexto.cs" />
+    <Compile Include="Contexto\MySqlEFConfiguration.cs" />
+    <Compile Include="Contexto\MySqlHistoryContext.cs" />
     <Compile Include="Entidades\Atleta.cs" />
     <Compile Include="Entidades\Diretoria.cs" />
     <Compile Include="Entidades\Empresa.cs" />
@@ -73,17 +75,9 @@
     <Compile Include="Entidades\Socio.cs" />
     <Compile Include="Entidades\TabelaAuxiliar.cs" />
     <Compile Include="Entidades\Voluntario.cs" />
-    <Compile Include="Migrations\201510291811169_Revisao12.cs" />
-    <Compile Include="Migrations\201510291811169_Revisao12.Designer.cs">
-      <DependentUpon>201510291811169_Revisao12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510291920057_Revisao12a.cs" />
-    <Compile Include="Migrations\201510291920057_Revisao12a.Designer.cs">
-      <DependentUpon>201510291920057_Revisao12a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510301844464_versao1.0.13.cs" />
-    <Compile Include="Migrations\201510301844464_versao1.0.13.Designer.cs">
-      <DependentUpon>201510301844464_versao1.0.13.cs</DependentUpon>
+    <Compile Include="Migrations\201511041526482_versao14.cs" />
+    <Compile Include="Migrations\201511041526482_versao14.Designer.cs">
+      <DependentUpon>201511041526482_versao14.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,14 +109,8 @@
     <Content Include="SQL\Atletas.sql" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510291811169_Revisao12.resx">
-      <DependentUpon>201510291811169_Revisao12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510291920057_Revisao12a.resx">
-      <DependentUpon>201510291920057_Revisao12a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510301844464_versao1.0.13.resx">
-      <DependentUpon>201510301844464_versao1.0.13.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511041526482_versao14.resx">
+      <DependentUpon>201511041526482_versao14.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

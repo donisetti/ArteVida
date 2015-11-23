@@ -20,6 +20,7 @@ namespace ArteVida.GestorWeb.Models
         }
     }
 
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
