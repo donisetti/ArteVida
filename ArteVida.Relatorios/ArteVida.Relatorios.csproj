@@ -42,7 +42,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Reporting, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.Reporting, Version=9.2.15.930, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>..\ArteVida.GestorWeb\telerik\Telerik.Reporting.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ListagemAtletas.cs">

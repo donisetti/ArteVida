@@ -16,7 +16,17 @@ namespace ArteVida.Dominio.Contexto
              
             foreach (string arq in arqSql)
             {
-                context.Database.ExecuteSqlCommand(File.ReadAllText(arq));
+                try
+                {
+                    context.Database.ExecuteSqlCommand(File.ReadAllText(arq));
+
+                }
+                catch (Exception erro)
+                {
+                    
+                    throw new Exception("Erro no Script de banco de dados"+ erro.Message);
+                }
+               
             }
 
             base.Seed(context);
