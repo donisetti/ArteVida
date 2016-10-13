@@ -1,6 +1,6 @@
 ﻿@using ArteVida.GestorWeb.ViewModels
 @(Html.Kendo().Grid<PessoaViewModel>()
-    .Name("GridAtleta")
+    .Name("GridDiretoria")
     .ToolBar(tb => tb.Create())
     .Events(e => e.Save("onGravaGrid"))
 
@@ -13,9 +13,9 @@
     .Filterable()
     .Editable(ed =>
     {
-        ed.Mode(GridEditMode.PopUp).TemplateName("TelaBase");
+        ed.Mode(GridEditMode.PopUp).TemplateName("TelaDiretoria");
         ed.DisplayDeleteConfirmation("Confirma a exlusão deste item?");
-        ed.Window(w => w.Title("Cadastro de Atletas"));
+        ed.Window(w => w.Title("Cadastro de Diretores"));
 
     }
           )
@@ -24,11 +24,11 @@
     .DataSource(dataSource => dataSource.Ajax()
     .Model(model => model.Id(c => c.PessoaId))
             .Events(ev => ev.RequestEnd("onRequestEndDiretoria").Error("onError"))
-            .Read("Ler", "Base")
+            .Read("Ler", "Diretoria")
             // .Create("Incluir", "Atleta")
-            .Create(create => create.Action("Incluir", "Base").Data("PegaID"))
-            .Update("Atualizar", "Base")
-            .Destroy("Excluir", "Base"))
+            .Create(create => create.Action("Incluir", "Diretoria").Data("PegaID"))
+            .Update("Atualizar", "Diretoria")
+            .Destroy("Excluir", "Diretoria"))
 
     .Columns(cols =>
     {

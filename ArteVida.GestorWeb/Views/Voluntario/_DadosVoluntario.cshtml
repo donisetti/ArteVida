@@ -1,0 +1,22 @@
+﻿@model ArteVida.GestorWeb.ViewModels.VoluntarioViewModel
+
+<div class="container  well">
+
+    @Html.HiddenFor(model => model.PessoaId, new { id = "voluntarioID" })
+
+    <div class="row">
+
+        <div class="col-md-1">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+
+
+        <div class="col-md-6">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)          
+        </div>
+
+    </div>
+  
+</div>
+

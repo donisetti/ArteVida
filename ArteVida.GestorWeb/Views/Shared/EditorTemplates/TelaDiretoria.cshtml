@@ -1,0 +1,19 @@
+﻿@model ArteVida.GestorWeb.ViewModels.DiretoriaViewModel
+
+<div class="col-md-11">
+    @(Html.Kendo().TabStrip()
+            .Name("tabstrip")
+          //  .Events(events => events.Select("AtualizaGridAtletaIrmaos"))
+            .Items(tabstrip =>
+            {
+                tabstrip.Add().Text("Diretoria")
+                    .Selected(true)
+                    .Content(@Html.Partial("_DadosDiretoria").ToHtmlString());
+
+
+
+            })
+    )
+
+</div>
+

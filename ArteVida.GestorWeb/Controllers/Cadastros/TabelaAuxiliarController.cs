@@ -116,14 +116,14 @@ namespace ArteVida.GestorWeb.Controllers
 
                 //return ListarDados(dados);
 
-                return _repositorio.ObterTodos().Where(x => x.Tipo == tipo).Project().To<TabelaAuxiliarViewModel>();
+                return _repositorio.ObterTodos().Where(x => x.Tipo == tipo).ProjectTo<TabelaAuxiliarViewModel>();
             }
             else
             {
                 //var dados = _repositorio.ObterTodos();
                 //return ListarDados(dados);
 
-                return _repositorio.ObterTodos().Project().To<TabelaAuxiliarViewModel>();
+                return _repositorio.ObterTodos().ProjectTo<TabelaAuxiliarViewModel>();
 
             }
         }

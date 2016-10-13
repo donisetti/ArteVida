@@ -1,0 +1,18 @@
+﻿@model ArteVida.GestorWeb.ViewModels.VoluntarioViewModel
+
+<div class="col-md-11">
+    @(Html.Kendo().TabStrip()
+            .Name("tabstrip")
+           // .Events(events => events.Select("AtualizaGridAtletaIrmaos"))
+            .Items(tabstrip =>
+            {
+                tabstrip.Add().Text("Volutário")
+                    .Selected(true)
+                    .Content(@Html.Partial("_DadosVoluntario").ToHtmlString());
+
+              
+
+            })
+    )
+
+</div>

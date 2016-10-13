@@ -68,7 +68,7 @@ namespace ArteVida.GestorWeb.Controllers
         private IQueryable<IrmaoViewModel> PegarIrmaos()
         {
 
-            var dados = _repositorio.ObterTodos().Where(x => x.Atleta.PessoaId == _AtletaId).Project().To<IrmaoViewModel>();
+            var dados = _repositorio.ObterTodos().Where(x => x.Atleta.PessoaId == _AtletaId).ProjectTo<IrmaoViewModel>();
 
                 return dados;
 

@@ -78,7 +78,7 @@ namespace ArteVida.GestorWeb.Controllers
             if (tipo != "Todos")
             {
 
-                var dados = _repositorio.ObterTodos().Project().To<AtletaViewModel>();
+                var dados = _repositorio.ObterTodos().ProjectTo<AtletaViewModel>();
 
 
                 return dados;
@@ -86,7 +86,7 @@ namespace ArteVida.GestorWeb.Controllers
             else
             {
 
-                var dados = _repositorio.ObterTodos().Project().To<AtletaViewModel>();
+                var dados = _repositorio.ObterTodos().ProjectTo<AtletaViewModel>();
 
 
                 return dados;

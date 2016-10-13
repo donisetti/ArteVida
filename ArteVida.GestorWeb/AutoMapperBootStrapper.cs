@@ -9,22 +9,22 @@ namespace ArteVida.GestorWeb
         public static void ConfigureAutoMapper()
         {
 
-            Mapper.CreateMap<TabelaAuxiliarViewModel, TabelaAuxiliar>();
-            Mapper.CreateMap<TabelaAuxiliar, TabelaAuxiliarViewModel>();
+            //Mapper.CreateMap<TabelaAuxiliarViewModel, TabelaAuxiliar>();
+            //Mapper.CreateMap<TabelaAuxiliar, TabelaAuxiliarViewModel>();
 
-            Mapper.CreateMap<PessoaViewModel, Pessoa>();
-            Mapper.CreateMap<Pessoa, PessoaViewModel>();
+            //Mapper.CreateMap<PessoaViewModel, Pessoa>();
+            //Mapper.CreateMap<Pessoa, PessoaViewModel>();
 
-            Mapper.CreateMap<AtletaViewModel, Atleta>();
-            Mapper.CreateMap<Atleta, AtletaViewModel>()
-                .ForMember(d => d.TelefonePais, o => o.MapFrom(p => p.TelefonePai + " - " + p.TelefoneMae))
-                 .ForMember(d => d.NomePais, o => o.MapFrom(p =>  p.Pai +",  "+ p.Mae));
+            //Mapper.CreateMap<AtletaViewModel, Atleta>();
+            //Mapper.CreateMap<Atleta, AtletaViewModel>()
+            //    .ForMember(d => d.TelefonePais, o => o.MapFrom(p => p.TelefonePai + " - " + p.TelefoneMae))
+            //     .ForMember(d => d.NomePais, o => o.MapFrom(p =>  p.Pai +",  "+ p.Mae));
 
-            Mapper.CreateMap<IrmaoViewModel, Irmao>();
-            Mapper.CreateMap<Irmao, IrmaoViewModel>();
+            //Mapper.CreateMap<IrmaoViewModel, Irmao>();
+            //Mapper.CreateMap<Irmao, IrmaoViewModel>();
 
-            Mapper.CreateMap<InstrutorViewModel, Instrutor>();
-            Mapper.CreateMap<Instrutor, InstrutorViewModel>();
+            //Mapper.CreateMap<InstrutorViewModel, Instrutor>();
+            //Mapper.CreateMap<Instrutor, InstrutorViewModel>();
 
 
 
